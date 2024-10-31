@@ -14,6 +14,7 @@
         "format": "{icon}",
         // "output": "DP-1", // uncomment when hyprland/workspaces#secondary is fixed
 	"all-outputs": true,
+	// "disable-click": true, // not working
         "format-icons": {
 	    "active": "+",
 	    "default": "-"

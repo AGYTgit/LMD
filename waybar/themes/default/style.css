@@ -11,18 +11,10 @@
 */
 
 /* -----------------------------------------------------
- * Import Pywal colors 
+ * Import catppuccin palette
  * ----------------------------------------------------- */
 /* @import 'style-light.css'; */
-@define-color backgroundlight #FFFFFF;
-@define-color backgrounddark #FFFFFF;
-@define-color workspacesbackground1 #FFFFFF;
-@define-color workspacesbackground2 #CCCCCC;
-@define-color bordercolor #FFFFFF;
-@define-color textcolor1 #000000;
-@define-color textcolor2 #000000;
-@define-color textcolor3 #FFFFFF;
-@define-color iconcolor #FFFFFF;
+@import 'mocha.css';
 
 /* -----------------------------------------------------
  * General 
@@ -35,89 +27,69 @@
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0);
-    border-bottom: 0px solid #ffffff;
-    /* color: #FFFFFF; */
-    transition-property: background-color;
-    transition-duration: .5s;
+    background-color: rgba(0,0,0,.35);
 }
 
 /* -----------------------------------------------------
  * Workspaces 
  * ----------------------------------------------------- */
 
+
 #workspaces.primary {
+    color: @lavender;
+    min-height: 25px;
+    min-width: 25px;
+    border-radius: 15px;
+
     margin: 5px 1px 6px 1px;
     padding: 0px 1px;
-    border-radius: 15px;
-    border: 0px;
+    
     font-weight: bold;
     font-style: normal;
     font-size: 16px;
-    color: @textcolor1;
 }
 
 #workspaces.primary button {
-    padding: 0px 5px;
-    margin: 4px 3px;
+    color: @lavender;
+    min-height: 25px;
+    min-width: 25px;
     border-radius: 15px;
-    border: 0px;
-    color: @textcolor3;
+
+    margin: 5px 1px 6px 1px;
+    padding: 0px 1px;
+    
     transition: all 0.3s ease-in-out;
 }
 
 #workspaces.primary button.active {
-    color: @textcolor1;
-    background: @workspacesbackground2;
-    border-radius: 15px;
+    color: @lavender;
+    background: @base;
+    min-height: 25px;
     min-width: 40px;
+    border-radius: 15px;
+
     transition: all 0.3s ease-in-out;
 }
 
-#workspaces.primary button:hover {
-    color: @textcolor1;
-    background: @workspacesbackground2;
-    border-radius: 15px;
+#workspaces.primary button:hover, #workspaces.primary button.active:hover {
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    transition: none;
 }
 
-/* -----------------------------------------------------
- * Window
- * ----------------------------------------------------- */
-
-#window {
-    background: @backgroundlight;
-    margin: 10px 15px 10px 0px;
-    padding: 2px 10px 0px 10px;
-    border-radius: 12px;
-    color:@textcolor2;
-    font-size:16px;
-    font-weight:normal;
+#workspaces.primary button.active:hover {
+    background: @base;
 }
-
-window#waybar.empty #window {
-    background-color:transparent;
-}
-
-/* -----------------------------------------------------
- * Modules
- * ----------------------------------------------------- */
-
-/*.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}*/
 
 /* -----------------------------------------------------
  * Clock
  * ----------------------------------------------------- */
 
 #clock.clock, #clock.date {
-    background-color: @backgrounddark;
+    background-color: @crust;
     font-size: 16px;
-    color: @textcolor1;
+    color: @lavender;
     border-radius: 15px;
     padding: 2px 10px 0px 10px;
     margin: 10px 15px 10px 0px;
