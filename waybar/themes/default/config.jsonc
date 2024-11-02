@@ -29,7 +29,7 @@
 
     // Load Modules
     "include": [
-        "~/.config/waybar/themes/default/modules.jsonc"
+        "$HOME/.dotfiles/LMD-dotfiles/waybar/themes/default/modules.jsonc"
     ],
 
     // Modules Left
