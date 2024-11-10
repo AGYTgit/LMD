@@ -1,12 +1,16 @@
 #!/bin/zsh
 
-CONFIG_PATH="$HOME/.dotfiles/LMD-dotfiles/waybar" # $HOME/.config/waybar/themes/default/style.css"
-THEME_PATH="/themes/default"
-trap "killall waybar" EXIT
+CONFIG_PATH="${HOME}/.dotfiles/LMD-dotfiles/waybar"
 
-waybar -c $CONFIG_PATH/$THEME_PATH/config.jsonc -s $CONFIG_PATH/$THEME_PATH/style.css &
+trap "killall ${WAYBAR_PID}; exit" SIGTERM
 
 while true; do
-    inotifywait -e modify ${CONFIG_PATH}/${THEME_PATH}
-    killall -SIGUSR2 waybar
+	THEME_PATH="themes/$(cat ${CONFIG_PATH}/current-theme.txt)"
+
+    waybar -c "${CONFIG_PATH}/${THEME_PATH}/config.jsonc" -s "${CONFIG_PATH}/${THEME_PATH}/style.css" &
+	WAYBAR_PID=$!
+
+    inotifywait -e modify,create,move,delete "${CONFIG_PATH}/current-theme.txt" "${CONFIG_PATH}/${THEME_PATH}"
+
+    kill ${WAYBAR_PID}
 done

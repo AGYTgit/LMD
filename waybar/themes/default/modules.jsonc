@@ -13,37 +13,37 @@
     "hyprland/workspaces#primary": {
         "format": "{icon}",
         // "output": "DP-1", // uncomment when hyprland/workspaces#secondary is fixed
-	"all-outputs": true,
-	// "disable-click": true, // not working
+		"all-outputs": true,
+		// "disable-click": true, // not working
         "format-icons": {
-	    "active": "+",
-	    "default": "-"
+			"active": "+",
+			"default": "-"
         }
     },
     "hyprland/workspaces#special": { // unused (not working)
         "format": "{icon}",
-	"show-special": true,
+		"show-special": true,
         "format-icons": {
-	    "active": "+",
-	    "default": "-"
+			"active": "+",
+			"default": "-"
         }
     },
     "hyprland/workspaces#secondary": { // unused (not working)
         "format": "{icon}",
         "output": "!DP-1",
         "format-icons": {
-	    "active": "+",
-	    "default": "-"
+			"active": "+",
+			"default": "-"
         }
     },
     // Clock
     "clock#clock": {
         "format": "{:%I:%M %p}",
-	"interval": 60,
+		"interval": 60,
         "tooltip": false
     },
     "clock#date": {
-	"format": "{:%d/%m/%y}",
+		"format": "{:%d/%m/%y}",
         "tooltip": false
     }
 }

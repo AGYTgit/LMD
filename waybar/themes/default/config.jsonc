@@ -28,9 +28,7 @@
     "output": "DP-1",
 
     // Load Modules
-    "include": [
-        "$HOME/.dotfiles/LMD-dotfiles/waybar/themes/default/modules.jsonc"
-    ],
+    "include": ["/home/agyt/.dotfiles/LMD-dotfiles/waybar/themes/default/modules.jsonc"],
 
     // Modules Left
     // "modules-left": [
@@ -48,7 +46,7 @@
     "modules-center": [
         "hyprland/workspaces#primary"
         // "hyprland/workspaces#special", // (module not working)
-	// "hyprland/workspaces#secondary" // (module not working)
+		// "hyprland/workspaces#secondary" // (module not working)
     ],
 
     // Modules Right    
@@ -62,7 +60,7 @@
         // "custom/exit",
         // "custom/ml4w-welcome",
         "clock#clock",
-	"clock#date"
-	// "custom/date"
+		"clock#date"
+		// "custom/date"
     ]
 }
