@@ -2,10 +2,13 @@
 
 CONFIG_PATH="$HOME/.dotfiles/LMD-dotfiles/hyprpaper"
 
-trap "killall hyprpaper" INT TERM
+trap "kill $HYPRPAPER_PID; exit" SIGTERM
 
 while true; do
-    hyprpaper -c $CONFIG_PATH/hyprpaper.conf &
-    inotifywait -e modify ${CONFIG_PATH}
-    killall hyprpaper
+    hyprpaper -c "$CONFIG_PATH/hyprpaper.conf" &
+	HYPRPAPER_PID=$!
+
+    inotifywait -e modify "$CONFIG_PATH/hyprpaper.conf" "$CONFIG_PATH/wallpapers"
+
+    kill $HYPRPAPER_PID
 done
