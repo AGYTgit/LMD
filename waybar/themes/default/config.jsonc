@@ -28,7 +28,7 @@
     "output": "DP-1",
 
     // Load Modules
-    "include": ["/home/agyt/.dotfiles/LMD-dotfiles/waybar/themes/default/modules.jsonc"],
+    "include": ["/home/agyt/.dotfiles/LMD/waybar/themes/default/modules.jsonc"],
 
     // Modules Left
     // "modules-left": [

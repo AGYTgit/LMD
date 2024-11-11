@@ -1,8 +1,8 @@
 #!/bin/zsh
 
-CONFIG_PATH="$HOME/.dotfiles/LMD-dotfiles/waybar"
+CONFIG_PATH="$HOME/.dotfiles/LMD/waybar"
 
-trap "killall $WAYBAR_PID; exit" SIGTERM
+trap "kill $WAYBAR_PID; exit" SIGTERM SIGINT
 
 while true; do
 	THEME_PATH="themes/$(cat $CONFIG_PATH/current-theme.txt)"
