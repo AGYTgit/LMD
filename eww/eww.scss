@@ -1,7 +1,14 @@
-@import "scss/index.scss";
-@import "scss/variables.scss";
-@import "scss/sidebar/apatheia.scss";
-@import "scss/sidebar/clipboard.scss";
-@import "scss/sidebar/music.scss";
-@import "scss/sidebar/sys-tray.scss";
-@import "scss/widgets/widgets.scss";
+* {
+  all: unset;
+  font-size: 20px;
+  background-color: rgba(11,10,15,1);
+  border-radius: 8px;
+}
+
+.workspace-entry {
+  color: rgb(100,255,100);
+}
+
+.active-workspace {
+  color: rgb(200,0,200);
+}
