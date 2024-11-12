@@ -25,10 +25,10 @@
     "margin-right": 0,    
     "spacing": 0,
 
-    "output": "DP-1",
+    "output": "HDMI-A-1",
 
     // Load Modules
-    "include": ["/home/agyt/.dotfiles/LMD/waybar/themes/default/modules.jsonc"],
+    "include": ["/home/agyt/.dotfiles/LMD/waybar/themes/default/modules.jsonc"], // todo: use relative path
 
     // Modules Left
     // "modules-left": [
