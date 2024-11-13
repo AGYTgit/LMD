@@ -1,18 +1,30 @@
 (defwindow hyprbar
 	:monitor 1
 	:geometry (geometry :anchor "top center" :x "0" :y "5px" :width "1910px" :height "32px")
-	
 	:exclusive "true"
 
-	(workspaces-primary)
+	(box
+		(workspaces-primary)
+		(workspaces-secondary)
+	)
 )
 
-(deflisten workspaces :initial "[]" "zsh ~/.dotfiles/LMD/eww/get-workspaces.sh")
-(deflisten current_workspace :initial "1" "zsh ~/.dotfiles/LMD/eww/get-active-workspaces.sh")
+(deflisten workspaces-primary :initial "[]" "zsh ~/.dotfiles/LMD/eww/get-workspaces.sh 1")
+(deflisten workspaces-secondary :initial "[]" "zsh ~/.dotfiles/LMD/eww/get-workspaces.sh 0")
+
+
 (defwidget workspaces-primary []
-	(box :space-evenly true
-		(for workspace in workspaces
-			(label :text "${workspace.id}" :class "workspace-entry ${workspace.id == current_workspace.id ? "active-workspace" : ""}" )
+	(box
+		(for workspace in workspaces-primary
+			(label :text "${workspace.id}" :class "workspace-entry workspace-${workspace.id}")
+		)
+	)
+)
+
+(defwidget workspaces-secondary []
+	(box
+		(for workspace in workspaces-secondary
+			(label :text "${workspace.id}" :class "workspace-entry workspace-${workspace.id}")
 		)
 	)
 )
