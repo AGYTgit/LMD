@@ -2,13 +2,22 @@
   all: unset;
   font-size: 20px;
   background-color: rgba(11,10,15,1);
-  border-radius: 8px;
 }
 
 .workspace-entry {
-  color: rgb(100,255,100);
+  color: rgb(255,255,255);
+  padding: 0px 5px;
 }
 
-.active-workspace {
-  color: rgb(200,0,200);
+.workspace-separator {
+  padding: 0px 10px;
+}
+
+
+.workspace-active {
+  color: rgb(255,255,255);
+}
+
+.workspace-inactive {
+  color: rgb(100,100,100);
 }

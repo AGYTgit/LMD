@@ -4,19 +4,29 @@
 	:exclusive "true"
 
 	(box
-		(workspaces-primary)
-		(workspaces-secondary)
+		:orientation "horizontal"    ;; Horizontal alignment of items
+		:halign "center"             ;; Ensure everything is centered horizontally
+		:space-evenly "false"         ;; Even spacing for items within the box
+
+		(box :class "workspaces-group primary"
+			(workspaces-primary)    ;; Left: Primary workspaces
+		)
+		(box :class "center-content"   ;; Perfect center container
+			(label :text "|" :class "workspace-separator")
+		)
+		(box :class "workspaces-group secondary"
+			(workspaces-secondary)  ;; Right: Secondary workspaces
+		)
 	)
 )
 
-(deflisten workspaces-primary :initial "[]" "zsh ~/.dotfiles/LMD/eww/get-workspaces.sh 1")
-(deflisten workspaces-secondary :initial "[]" "zsh ~/.dotfiles/LMD/eww/get-workspaces.sh 0")
-
+(deflisten workspaces-primary :initial "[]" "zsh scripts/get-workspaces.sh 1")
+(deflisten workspaces-secondary :initial "[]" "zsh scripts/get-workspaces.sh 0")
 
 (defwidget workspaces-primary []
 	(box
 		(for workspace in workspaces-primary
-			(label :text "${workspace.id}" :class "workspace-entry workspace-${workspace.id}")
+			(label :text "${workspace.id}" :class "workspace-entry workspace-${workspace.id} ${workspace.active ? 'workspace-active' : 'workspace-inactive'}")
 		)
 	)
 )
@@ -24,7 +34,8 @@
 (defwidget workspaces-secondary []
 	(box
 		(for workspace in workspaces-secondary
-			(label :text "${workspace.id}" :class "workspace-entry workspace-${workspace.id}")
+			(label :text "${workspace.id}" 
+			       :class "workspace-entry workspace-${workspace.id} ${workspace.active ? 'workspace-active' : 'workspace-inactive'}")
 		)
 	)
 )
