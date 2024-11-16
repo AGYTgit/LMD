@@ -9,7 +9,7 @@
 	)
 )
 
-(deflisten workspaces-primary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'DP-1' true")
+(deflisten workspaces-primary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'DP-1' 1")
 (defwidget workspaces-primary []
 	(box
 		(for workspace in workspaces-primary-lis
@@ -20,7 +20,7 @@
 	)
 )
 
-(deflisten workspaces-secondary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'HDMI-A-1' false")
+(deflisten workspaces-secondary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'HDMI-A-1' 0")
 (defwidget workspaces-secondary []
 	(box
 		(for workspace in workspaces-secondary-lis
