@@ -1,24 +1,25 @@
 * {
   all: unset;
   font-size: 20px;
-  background-color: rgba(11,10,15,1);
 }
 
-.workspace-entry {
-  color: rgb(255,255,255);
-  padding: 0px 2px;
-  min-width: 20px;
+.hyprbar {
+  background-color: rgba(11,10,15,1);
 }
 
 .workspace-separator {
   padding: 0px 10px;
 }
 
-
-.workspace-active {
+.workspace-entry {
   color: rgb(255,255,255);
-}
+  min-width: 20px;
+  padding: 0px 2px;
 
-.workspace-inactive {
-  color: rgb(100,100,100);
+  &.active {
+    color: rgb(255,255,255);
+  }
+  &.inactive {
+    color: rgb(100,100,100);
+  }
 }

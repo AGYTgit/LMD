@@ -2,40 +2,48 @@
 	:monitor 1
 	:geometry (geometry :anchor "top center" :x "0" :y "5px" :width "1910px" :height "32px")
 	:exclusive "true"
+	:class "hyprbar"
 
 	(box
-		:orientation "horizontal"    ;; Horizontal alignment of items
-		:halign "center"             ;; Ensure everything is centered horizontally
-		:space-evenly "false"         ;; Even spacing for items within the box
-
-		(box :class "workspaces-group primary"
-			(workspaces-primary)    ;; Left: Primary workspaces
-		)
-		(box :class "center-content"   ;; Perfect center container
-			(label :text "|" :class "workspace-separator")
-		)
-		(box :class "workspaces-group secondary"
-			(workspaces-secondary)  ;; Right: Secondary workspaces
-		)
+		(workspace-widget)
 	)
 )
 
-(deflisten workspaces-primary :initial "[]" "zsh scripts/get-workspaces.sh 1")
-(deflisten workspaces-secondary :initial "[]" "zsh scripts/get-workspaces.sh 0")
-
+(deflisten workspaces-primary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'DP-1' true")
 (defwidget workspaces-primary []
 	(box
-		(for workspace in workspaces-primary
-			(label :text "${workspace.id}" :class "workspace-entry workspace-${workspace.id} ${workspace.active ? 'workspace-active' : 'workspace-inactive'}")
+		(for workspace in workspaces-primary-lis
+			(label :text "${workspace.id}"
+				:class "workspace-entry ${workspace.active ? 'active' : 'inactive'}"
+			)
 		)
 	)
 )
 
+(deflisten workspaces-secondary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'HDMI-A-1' false")
 (defwidget workspaces-secondary []
 	(box
-		(for workspace in workspaces-secondary
-			(label :text "${workspace.id}" 
-			       :class "workspace-entry workspace-${workspace.id} ${workspace.active ? 'workspace-active' : 'workspace-inactive'}")
+		(for workspace in workspaces-secondary-lis
+			(label :text "${workspace.id}"
+				:class "workspace-entry ${workspace.active ? 'active' : 'inactive'}")
+		)
+	)
+)
+
+(defwidget workspace-widget []
+	(box
+		:orientation "horizontal"
+		:halign "center"
+		:space-evenly "false"
+
+		(box
+			(workspaces-primary)
+		)
+		(box
+			(label :text "|" :class "workspace-separator")
+		)
+		(box
+			(workspaces-secondary)
 		)
 	)
 )
