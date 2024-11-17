@@ -13,7 +13,7 @@
 (defwidget workspaces-primary []
 	(box
 		(for workspace in workspaces-primary-lis
-			(label :text "${workspace.id}"
+			(label :text ""
 				:class "workspace-entry ${workspace.active ? 'active' : 'inactive'}"
 			)
 		)
@@ -24,7 +24,7 @@
 (defwidget workspaces-secondary []
 	(box
 		(for workspace in workspaces-secondary-lis
-			(label :text "${workspace.id}"
+			(label :text ""
 				:class "workspace-entry ${workspace.active ? 'active' : 'inactive'}")
 		)
 	)
