@@ -4,17 +4,26 @@
 	:exclusive "true"
 
 
-	(box
-		(box)
-		(workspace-widget)
-		(clock)
+	(box :orientation "h" :space-evenly true
+		(box :halign "start")
+		(box :class "workspace_widget" :orientation "h" :space-evenly "false" :halign "center"
+			(workspaces :workspace-lis workspaces-primary-lis)
+			(separator)
+			(workspaces :workspace-lis workspaces-secondary-lis)
+		)
+		(box :orientation "h" :space-evenly false :halign "end"
+			(clock)
+			(separator)
+			(date)
+		)
 	)
 )
 
 (deflisten workspaces-primary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'DP-1' 1")
-(defwidget workspaces-primary []
+(deflisten workspaces-secondary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'HDMI-A-1' 0")
+(defwidget workspaces [workspace-lis]
 	(box
-		(for workspace in workspaces-primary-lis
+		(for workspace in workspace-lis
 			(label :text ""
 				:class "workspace-entry ${workspace.active ? 'active' : 'inactive'}"
 			)
@@ -22,35 +31,24 @@
 	)
 )
 
-(deflisten workspaces-secondary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'HDMI-A-1' 0")
-(defwidget workspaces-secondary []
-	(box
-		(for workspace in workspaces-secondary-lis
-			(label :text ""
-				:class "workspace-entry ${workspace.active ? 'active' : 'inactive'}")
-		)
-	)
+(defwidget separator []
+	(label :text "|" :class "separator-line")
 )
 
-(defwidget workspace-widget []
-	(box :class "workspace_widget" :orientation "h" :space-evenly "false" :halign "center"
-		(box
-			(workspaces-primary)
-		)
-		(box
-			(label :text "|" :class "workspace-separator")
-		)
-		(box
-			(workspaces-secondary)
-		)
-	)
-)
-
-(defpoll HOUR :interval "1s" `date +\"%I:%M %p\"`)
+(defpoll TIME :interval "1s" `date +\"%I:%M"`)
 (defwidget clock [] 
 	(box :class "clock" :orientation "h" :space-evenly false :halign "end"
 		(box
-			(label :class "time_hour" :text HOUR)
+			(label :text TIME)
+		)
+	)
+)
+
+(defpoll DATE :interval "1s" `date +\"%d-%m-%Y"`)
+(defwidget date [] 
+	(box :class "date" :orientation "h" :space-evenly false :halign "end"
+		(box
+			(label :text DATE)
 		)
 	)
 )

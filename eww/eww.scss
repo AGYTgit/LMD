@@ -1,7 +1,7 @@
 * {
   all: unset;
-  font-size: 20px;
   font-family: "JetBrains Mono Nerd Font";
+  font-size: 20px;
 }
 
 .hyprbar {
@@ -9,16 +9,18 @@
   border-radius: 7px;
 }
 
-.workspace-separator {
+.separator-line {
+  color: rgb(100,100,100);
+  font-size: 18;
   padding: 0px 4px;
 }
 
 .workspace-entry {
-  color: rgb(255,255,255);
+  color: rgb(225,225,225);
   padding: 0px 5px;
 
   &.active {
-    color: rgb(255,255,255);
+    color: rgb(225,225,225);
   }
   &.inactive {
     color: rgb(100,100,100);
@@ -26,5 +28,10 @@
 }
 
 .clock {
+  color: rgb(225,225,225);
+}
+
+.date {
+  color: rgb(225,225,225);
   padding-right: 8px;
 }
