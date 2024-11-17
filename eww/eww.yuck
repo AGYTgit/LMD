@@ -1,11 +1,13 @@
-(defwindow hyprbar
+(defwindow hyprbar :class "hyprbar"
 	:monitor 1
 	:geometry (geometry :anchor "top center" :x "0" :y "5px" :width "1910px" :height "32px")
 	:exclusive "true"
-	:class "hyprbar"
+
 
 	(box
+		(box)
 		(workspace-widget)
+		(clock)
 	)
 )
 
@@ -31,11 +33,7 @@
 )
 
 (defwidget workspace-widget []
-	(box
-		:orientation "horizontal"
-		:halign "center"
-		:space-evenly "false"
-
+	(box :class "workspace_widget" :orientation "h" :space-evenly "false" :halign "center"
 		(box
 			(workspaces-primary)
 		)
@@ -44,6 +42,15 @@
 		)
 		(box
 			(workspaces-secondary)
+		)
+	)
+)
+
+(defpoll HOUR :interval "1s" `date +\"%I:%M %p\"`)
+(defwidget clock [] 
+	(box :class "clock" :orientation "h" :space-evenly false :halign "end"
+		(box
+			(label :class "time_hour" :text HOUR)
 		)
 	)
 )
