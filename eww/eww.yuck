@@ -5,7 +5,9 @@
 
 
 	(box :orientation "h" :space-evenly true
-		(box :halign "start")
+		(box :halign "start"
+			(menu)
+		)
 		(box :class "workspace_widget" :orientation "h" :space-evenly "false" :halign "center"
 			(workspaces :workspace-lis workspaces-primary-lis)
 			(separator)
@@ -19,13 +21,14 @@
 	)
 )
 
-(deflisten workspaces-primary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'DP-1' 1")
+(deflisten workspaces-primary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'DP-1' 0")
 (deflisten workspaces-secondary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'HDMI-A-1' 0")
 (defwidget workspaces [workspace-lis]
 	(box
 		(for workspace in workspace-lis
-			(label :text ""
-				:class "workspace-entry ${workspace.active ? 'active' : 'inactive'}"
+			(image :class "workspace-entry ${workspace.active ? 'active' : 'inactive'}"
+				:image-width 11
+				:path "assets/workspaces/circle-${workspace.windows > 4 ? 4 : workspace.windows}.png"
 			)
 		)
 	)
@@ -49,6 +52,14 @@
 	(box :class "date" :orientation "h" :space-evenly false :halign "end"
 		(box
 			(label :text DATE)
+		)
+	)
+)
+
+(defwidget menu []
+	(box :class "menu" :orientation "h" :space-evenly false :halign "start"
+		(image :image-width 24
+			:path "assets/snowflake.png"
 		)
 	)
 )
