@@ -8,10 +8,10 @@ get_fullscreen_monitor() {
 
     if [[ "$current_state" != "$prev_state" && "$current_state" != "[]" ]]; then
 		$(eww close hyprbar)
-		if [[ "$current_state" == false ]]; then
-			$(eww open hyprbar --screen 1)
-		else
+		if [[ "$current_state" == true ]]; then
 			$(eww open hyprbar --screen 0)
+		else
+			$(eww open hyprbar --screen 1)
 		fi
 
 		prev_state="$current_state"
