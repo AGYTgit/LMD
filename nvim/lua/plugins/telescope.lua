@@ -7,6 +7,7 @@ require('telescope').setup({
                 ['<C-j>'] = require('telescope.actions').move_selection_next,
             },
         },
+        file_ignore_patterns = { ".git/" },
     },
     extensions = {
         fzf = {
