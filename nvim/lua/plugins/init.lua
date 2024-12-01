@@ -11,4 +11,12 @@ require('packer').startup(function(use)
             require('plugins.colorscheme')
         end
     }
+    use { 'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
+        config = function()
+            require('plugins.nvim-tree')
+        end
+    }
 end)

@@ -4,14 +4,11 @@ vim.cmd([[
     noremap ; :
 ]])
 
-local k = vim.keymap
 vim.g.mapleader = " "
-
--- open explore
-k.set("n", "<leader>e", ":Explore<CR>", { noremap = true, silent = true })
+local k = vim.keymap
 
 -- clear search
-k.set("n", "<leader>h", ":nohl<CR>", { noremap = true, silent = true })
+k.set("n", "<leader>h", "<cmd>nohl<CR>", { noremap = true, silent = true })
 
 -- create split
 k.set("n", "<leader>sh", "<C-w>v", { noremap = true, silent = true })
