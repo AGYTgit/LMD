@@ -10,9 +10,6 @@ vim.g.mapleader = " "
 -- open explore
 k.set("n", "<leader>e", ":Explore<CR>", { noremap = true, silent = true })
 
--- open lazy
-k.set("n", "<leader>l", ":Lazy<CR>", { noremap = true, silent = true })
-
 -- clear search
 k.set("n", "<leader>h", ":nohl<CR>", { noremap = true, silent = true })
 
