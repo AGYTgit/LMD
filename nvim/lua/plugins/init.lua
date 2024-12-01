@@ -19,4 +19,23 @@ require('packer').startup(function(use)
             require('plugins.nvim-tree')
         end
     }
+    use { "nvim-telescope/telescope.nvim",
+        branch = "0.1.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+            "nvim-tree/nvim-web-devicons",
+            "folke/todo-comments.nvim",
+        },
+        config = function()
+            require("plugins.telescope")
+        end
+    }
+    use { 'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        config = function()
+            require('plugins.treesitter')
+        end
+    }
+
 end)

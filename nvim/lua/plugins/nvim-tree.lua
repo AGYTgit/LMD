@@ -31,7 +31,3 @@ require('nvim-tree').setup({
         ignore = true,
     },
 })
-
-local k = vim.keymap
-
-k.set('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
