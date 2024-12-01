@@ -29,15 +29,3 @@ o.clipboard:append("unnamedplus")
 
 -- syntax highlight
 vim.cmd([[syntax on]])
-
--- appearance
-vim.cmd([[
-    colorscheme vim
-    set notermguicolors
-]])
-
--- transparent bg
-vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'none' })
