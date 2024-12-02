@@ -5,7 +5,7 @@ end
 vim.cmd('packadd packer.nvim')
 
 require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
+    use { 'wbthomason/packer.nvim' }
 
     use { 'Mofiqul/vscode.nvim',
         config = function() require('plugins.colorscheme') end
