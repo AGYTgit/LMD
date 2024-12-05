@@ -31,3 +31,5 @@ o.clipboard:append("unnamedplus")
 
 -- syntax highlight
 vim.cmd([[syntax on]])
+
+vim.o.scrolloff = 999
