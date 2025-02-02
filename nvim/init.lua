@@ -1,2 +1,2 @@
-require("core")
-require("packer-conf")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

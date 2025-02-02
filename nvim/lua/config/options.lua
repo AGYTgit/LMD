@@ -1,4 +1,4 @@
-vim.cmd('autocmd BufWritePost init.lua source <afile>')
+vim.cmd("autocmd BufWritePost init.lua source <afile>")
 
 vim.cmd("let g:netrw_liststyle = 3")
 
