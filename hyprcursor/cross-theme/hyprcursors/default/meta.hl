@@ -1,8 +1,0 @@
-resize_algorithm = bilinear
-
-hotspot_x = 0.5
-hotspot_y = 0.5
-
-define_override = default
-
-define_size = 64, image64.png
