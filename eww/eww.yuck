@@ -39,7 +39,7 @@
 )
 
 (defpoll TIME :interval "1s" `date +\"%I:%M"`)
-(defwidget clock [] 
+(defwidget clock []
 	(box :class "clock" :orientation "h" :space-evenly false :halign "end"
 		(box
 			(label :text TIME)
@@ -48,7 +48,7 @@
 )
 
 (defpoll DATE :interval "1s" `date +\"%d-%m-%Y"`)
-(defwidget date [] 
+(defwidget date []
 	(box :class "date" :orientation "h" :space-evenly false :halign "end"
 		(box
 			(label :text DATE)
