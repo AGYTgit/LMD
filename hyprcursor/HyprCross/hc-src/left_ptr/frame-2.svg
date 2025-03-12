@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120"
+   height="120"
+   viewBox="0 0 31.75 31.75"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="frame-2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="65.053824"
+     inkscape:cy="51.088465"
+     inkscape:window-width="1896"
+     inkscape:window-height="1019"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1">
+    <inkscape:grid
+       id="grid4"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="0.5291667"
+       spacingy="0.5291667"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="31.749998,0"
+       end_point="0,31.750002"
+       center_point="15.874999,15.875001"
+       id="path-effect3"
+       is_visible="true"
+       lpeversion="1.2"
+       lpesatellites=""
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false"
+       link_styles="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="0,0"
+       end_point="31.749998,31.750002"
+       center_point="15.874999,15.875001"
+       id="path-effect2"
+       is_visible="true"
+       lpeversion="1.2"
+       lpesatellites=""
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false"
+       link_styles="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="0,15.875"
+       end_point="31.749998,15.875001"
+       center_point="15.874999,15.875"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1.2"
+       lpesatellites=""
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false"
+       link_styles="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1">
+      <path
+         style="fill:#00ffff;stroke-width:0.264583"
+         d="M 5.291667,14.287501 4.2333336,12.170834 1.2023076,15.875001 H 12.700001 l -1.058334,-1.058333 m -6.3500001,2.64583 -1.0583335,2.116667 -3.0310258,-3.704167 11.4976934,1e-6 -1.058334,1.058333 M 14.2875,5.2916688 12.170833,4.2333351 l 3.704168,-3.0310255 -2e-6,11.4976934 -1.058332,-1.058334 m 2.645831,-6.3499999 2.116667,-1.0583333 -3.704167,-3.0310262 -10e-7,11.4976934 1.058333,-1.058334 m 0.52917,14.816664 2.116667,1.058333 -3.704166,3.031026 -2e-6,-11.497693 1.058334,1.058334 m -2.64583,6.35 -2.116667,1.058334 3.704168,3.031025 -2e-6,-11.497693 -1.058333,1.058334 m 11.641662,-2.645835 1.058334,2.116667 3.031025,-3.704168 -11.497693,3e-6 1.058334,1.058333 m 6.35,-2.645832 1.058333,-2.116667 3.031026,3.704166 -11.497693,2e-6 1.058334,-1.058333"
+         id="path1"
+         inkscape:path-effect="#path-effect1;#path-effect2;#path-effect3"
+         inkscape:original-d="M 5.291667,14.287501 4.2333336,12.170834 1.2023076,15.875001 H 12.700001 l -1.058334,-1.058333"
+         sodipodi:nodetypes="ccccc"
+         transform="rotate(30,15.874999,15.875001)" />
+    </g>
+  </g>
+</svg>
