@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120"
+   height="120"
+   viewBox="0 0 31.75 31.75"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="wn-resize.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="5.4317406"
+     inkscape:cx="29.364436"
+     inkscape:cy="50.444235"
+     inkscape:window-width="1896"
+     inkscape:window-height="1019"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid4"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="0.5291667"
+       spacingy="0.5291667"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient277"
+       inkscape:collect="always"
+       inkscape:label="main">
+      <stop
+         style="stop-color:#0b0a0f;stop-opacity:1;"
+         offset="0.40000001"
+         id="stop276" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.55960453"
+         id="stop277" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient275"
+       inkscape:collect="always"
+       inkscape:label="main">
+      <stop
+         style="stop-color:#0b0a0f;stop-opacity:1;"
+         offset="0.69999999"
+         id="stop274" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.86000001"
+         id="stop275" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient275"
+       id="radialGradient5"
+       cx="15.875"
+       cy="15.875"
+       fx="15.875"
+       fy="15.875"
+       r="13.890625"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-5.4052037e-8,1.1428573,-1.1428571,-4.3249572e-8,34.014814,-2.2684071)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient275"
+       id="radialGradient7"
+       cx="15.875"
+       cy="15.875"
+       fx="15.875"
+       fy="15.875"
+       r="13.890625"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-5.4052037e-8,1.1428573,-1.1428571,-4.3249572e-8,34.014814,-2.2684071)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient277"
+       id="radialGradient263"
+       cx="15.875001"
+       cy="15.875001"
+       fx="15.875001"
+       fy="15.875001"
+       r="5.291667"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.5,-6.0969608e-8,-2.8550061e-7,1.5000001,-7.9374954,-7.9375007)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path3"
+       style="fill:url(#radialGradient5);fill-opacity:1;fill-rule:evenodd;stroke:url(#radialGradient7);stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:normal"
+       d="M 27.704309,9.9585329 C 25.53237,5.6231289 21.0511,2.6452849 15.871956,2.6452839 c -7.3062675,1e-6 -13.2291665,5.9229 -13.2291674,13.2291671 1e-6,5.179144 2.977845,9.660414 7.313249,11.832353 L 11.626737,24.364889 A 9.5250006,9.5250006 0 0 1 6.3469555,15.874451 9.5250006,9.5250006 0 0 1 15.871956,6.3494509 9.5250006,9.5250006 0 0 1 24.362394,11.629232 Z"
+       inkscape:transform-center-x="0.70020347"
+       inkscape:transform-center-y="-0.69715967" />
+    <circle
+       style="fill:url(#radialGradient263);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:normal"
+       id="path262"
+       cx="15.875001"
+       cy="15.875001"
+       r="5.291667" />
+  </g>
+</svg>
