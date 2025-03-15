@@ -60,7 +60,6 @@ return {
         "yaml",
         "yuck",
         "cpp",
-        "c++",
       },
     },
   },
