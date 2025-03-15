@@ -40,49 +40,50 @@ return {
   },
 
   -- add more treesitter parsers
-  --  {
-  --    "nvim-treesitter/nvim-treesitter",
-  --    opts = {
-  --      ensure_installed = {
-  --        "bash",
-  --        "html",
-  --        "javascript",
-  --        "json",
-  --        "lua",
-  --        "markdown",
-  --        "markdown_inline",
-  --        "python",
-  --        "query",
-  --        "regex",
-  --        "tsx",
-  --        "typescript",
-  --        "vim",
-  --        "yaml",
-  --        "yuck",
-  --      },
-  --    },
-  --  },
-  --
-  --
-  --  {
-  --    "nvim-lualine/lualine.nvim",
-  --    event = "VeryLazy",
-  --    opts = function()
-  --      return {
-  --        --[[add your custom lualine config here]]
-  --      }
-  --    end,
-  --  },
-  --
-  --  {
-  --    "williamboman/mason.nvim",
-  --    opts = {
-  --      ensure_installed = {
-  --        "stylua",
-  --        "shellcheck",
-  --        "shfmt",
-  --        "flake8",
-  --      },
-  --    },
-  --  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "bash",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "query",
+        "regex",
+        "tsx",
+        "typescript",
+        "vim",
+        "yaml",
+        "yuck",
+        "cpp",
+        "c++",
+      },
+    },
+  },
+
+  -- {
+  --   "nvim-lualine/lualine.nvim",
+  --   event = "VeryLazy",
+  --   opts = function()
+  --     return {
+  --       --[[add your custom lualine config here]]
+  --     }
+  --   end,
+  -- },
+
+  -- {
+  --   "williamboman/mason.nvim",
+  --   opts = {
+  --     ensure_installed = {
+  --       "stylua",
+  --       "shellcheck",
+  --       "shfmt",
+  --       "flake8",
+  --     },
+  --   },
+  -- },
 }
