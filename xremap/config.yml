@@ -1,0 +1,4 @@
+modmap:
+  - name: better-esc
+    remap:
+      CapsLock: Esc

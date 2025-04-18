@@ -10,10 +10,10 @@
 		)
 		(box :class "workspace_widget" :orientation "h" :space-evenly "false" :halign "center"
 			(workspaces :workspace-lis workspaces-primary-lis)
-			(separator)
-			(workspaces :workspace-lis workspaces-secondary-lis)
 		)
 		(box :orientation "h" :space-evenly false :halign "end"
+			(battery)
+			(separator)
 			(clock)
 			(separator)
 			(date)
@@ -21,8 +21,8 @@
 	)
 )
 
-(deflisten workspaces-primary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'DP-1' 0")
-(deflisten workspaces-secondary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'HDMI-A-1' 0")
+(deflisten workspaces-primary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'eDP-1' 0")
+(deflisten workspaces-secondary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'eDP-1' 0")
 (defwidget workspaces [workspace-lis]
 	(box
 		(for workspace in workspace-lis
@@ -36,6 +36,15 @@
 
 (defwidget separator []
 	(label :text "|" :class "separator-line")
+)
+
+(defpoll BATTERY :interval "10s" `cat /sys/class/power_supply/BAT1/capacity`)
+(defwidget battery []
+	(box :class "battery" :orientation "h" :space-evenly false :halign "end"
+		(box
+			(label :text BATTERY)
+		)
+	)
 )
 
 (defpoll TIME :interval "1s" `date +\"%I:%M"`)

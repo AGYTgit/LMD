@@ -7,7 +7,7 @@ const vec3 LUMA_COEFF = vec3(0.4, 0.4, 0.4);
 const float SATTURATION_MULTIPLIER = 1.0;
 
 const vec3 VIB_RGB_BALANCE = vec3(1.0, 1.0, 1.0);
-const float VIB_STRENGTH = 0.175;
+const float VIB_STRENGTH = 0.45;
 const vec3 VIB_COEFF = VIB_RGB_BALANCE * VIB_STRENGTH * -1.0;
 
 void main() {

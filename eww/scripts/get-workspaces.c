@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
 	// get all current workspaces
 	char current_command[1024];
 	snprintf(current_command, sizeof(current_command),
-		"hyprctl workspaces -j | jq -c '[.[] | {id: .id, windows: .windows, monitor: .monitor} | select(.monitor == \"%s\")]'", 
+		"hyprctl workspaces -j | jq -c '[.[] | {id: .id, windows: .windows, monitor: .monitor}]'", 
 		monitor);
     FILE *fp_c = popen(current_command, "r");
     if (fp_c == NULL) {
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 	// get all possible workspaces
 	char all_command[1024];
 	snprintf(all_command, sizeof(all_command),
-		"hyprctl workspacerules -j | jq -c '[.[] | {id: .workspaceString, monitor: .monitor} | select(.monitor == \"%s\")]%s'", 
+		"hyprctl workspacerules -j | jq -c '[.[] | {id: .workspaceString, monitor: .monitor}]'", 
 		monitor, reversed ? " | reverse" : ""
 	);
     FILE *fp = popen(all_command, "r");
