@@ -1,0 +1,13 @@
+[Unit]
+Description=xremap
+
+[Service]
+Type=oneshot
+KillMode=process
+ExecStart=xremap /home/agyt/.dotfiles/LMD/xremap/config.yml
+ExecStop=/usr/bin/killall xremap
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target
