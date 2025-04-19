@@ -1,4 +1,4 @@
-THEME_NAME := HyprCircle
+THEME_NAME := HyprCross
 THEME_SIZE := 25
 SOURCE_DIR := hc-src
 BUILD_DIR := hc
