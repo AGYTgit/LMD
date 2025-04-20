@@ -1,0 +1,8 @@
+alacritty:
+    showing % at startup
+
+fingerprint reader:
+    doesn't verify fingerprint
+
+natural scrolling:
+    doesn't work

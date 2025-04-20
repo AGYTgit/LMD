@@ -1,0 +1,8 @@
+auto setup:
+    update system
+    install dependencies
+    setup variables (user, display, ...)
+    symlink files across the system
+    reboot
+
+auto unsetup:
