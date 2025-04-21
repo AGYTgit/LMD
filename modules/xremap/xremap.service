@@ -4,7 +4,7 @@ Description=xremap
 [Service]
 Type=oneshot
 KillMode=process
-ExecStart=xremap /home/agyt/.dotfiles/LMD/config/xremap/config.yml
+ExecStart=xremap /home/agyt/.dotfiles/LMD/modules/xremap/config.yml
 ExecStop=/usr/bin/killall xremap
 Restart=on-failure
 RestartSec=10

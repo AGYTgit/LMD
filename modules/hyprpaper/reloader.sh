@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-CONFIG_PATH="$HOME/.dotfiles/LMD/hyprpaper"
+CONFIG_PATH="$HOME/.dotfiles/LMD/modules/hyprpaper"
 
 trap "kill $HYPRPAPER_PID; exit" SIGTERM SIGINT INT TERM
 

@@ -1,3 +1,5 @@
+source "/home/$USER/.dotfiles/LMD/variables/path.sh"
+
 eval "$(starship init zsh)"
 
 alias l="ls -la"
