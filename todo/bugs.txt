@@ -6,3 +6,6 @@ fingerprint reader:
 
 natural scrolling:
     doesn't work
+
+audio-manager:
+    doesn't register changes in quick succession
