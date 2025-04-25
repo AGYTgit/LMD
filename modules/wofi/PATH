@@ -1,0 +1,2 @@
+source $DOTFILES/$MODULES/wofi/wofi
+target $HOME/.config/wofi

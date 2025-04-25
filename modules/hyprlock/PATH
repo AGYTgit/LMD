@@ -1,0 +1,2 @@
+source $DOTFILES/$MODULES/hyprlock/hyprlock/hyprlock.conf
+target $HOME/.config/hypr/hyprlock.conf

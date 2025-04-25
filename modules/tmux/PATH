@@ -1,0 +1,2 @@
+source $DOTFILES/$MODULES/tmux/tmux/.tmux.conf
+target $HOME/.tmux.conf

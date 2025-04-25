@@ -1,0 +1,2 @@
+source $DOTFILES/$MODULES/xremap/xremap/xremap.service
+target $HOME/.config/systemd/user/xremap.service

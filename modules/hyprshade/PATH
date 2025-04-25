@@ -1,0 +1,2 @@
+source $DOTFILES/$MODULES/hyprshade/hyprshade/shaders
+target $HOME/.config/hypr/shaders

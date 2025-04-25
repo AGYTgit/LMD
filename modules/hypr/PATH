@@ -1,0 +1,2 @@
+source $DOTFILES/$MODULES/hypr/hypr
+target $HOME/.config/hypr

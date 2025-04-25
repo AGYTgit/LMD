@@ -1,0 +1,2 @@
+source $DOTFILES/$MODULES/hyprpaper/hyprpaper/hyprpaper-reloader.service
+target $HOME/.config/systemd/user/hyprpaper-reloader.service
