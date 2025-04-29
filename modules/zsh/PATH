@@ -1,2 +1,0 @@
-source $DOTFILES/$MODULES/zsh/zsh/.zshrc
-target $HOME/.zshrc

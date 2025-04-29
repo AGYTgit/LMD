@@ -1,2 +1,0 @@
-source $DOTFILES/$MODULES/starship/starship/starship.toml
-target $HOME/.config/starship.toml

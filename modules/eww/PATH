@@ -1,2 +1,0 @@
-source $DOTFILES/$MODULES/eww/eww
-target $HOME/.config/eww

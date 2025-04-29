@@ -1,2 +1,0 @@
-source $DOTFILES/$MODULES/nvim/nvim
-target $HOME/.config/nvim

@@ -1,2 +1,0 @@
-source $DOTFILES/$MODULES/alacritty/alacritty
-target $HOME/.config/alacritty
