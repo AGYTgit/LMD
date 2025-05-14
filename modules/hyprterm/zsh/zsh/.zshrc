@@ -1,6 +1,6 @@
 eval "$(starship init zsh)"
 
-source "$HOME/.dotfiles/LMD/variables/path.sh"
+source "$HOME/.dotfiles/LMD/variables/path.env"
 
 # export DOTFILES="$HOME/.dotfiles"
 # export MODULES="modules"

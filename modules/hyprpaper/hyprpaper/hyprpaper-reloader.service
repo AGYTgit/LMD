@@ -5,7 +5,7 @@ After=graphical-session.target
 [Service]
 Type=oneshot
 KillMode=process
-ExecStart=/home/agyt/.dotfiles/l/modules/hyprpaper/hyprpaper/hyprpaper-reloader.sh
+ExecStart=/home/agyt/.dotfiles/LMD/modules/hyprpaper/hyprpaper/hyprpaper-reloader.sh
 ExecStop=/usr/bin/killall hyprpaper-reloader
 Restart=on-failure
 RestartSec=10
