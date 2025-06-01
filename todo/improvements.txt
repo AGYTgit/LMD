@@ -1,0 +1,2 @@
+hyprlock:
+    needs overall better dotfiles
