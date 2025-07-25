@@ -1,0 +1,104 @@
+[global]
+author = "Your Name"
+email = "your.email@example.com"
+repo_url = "https://github.com/yourName/dotfiles"
+repo_ssh = "git@github.com:yourName/dotfiles.git"
+last_updated = 2025-06-15T16:00:00+02:00
+platform = "pc" # Set a default profile to load if none is specified
+
+# Default behaviors for various dotfile modules
+[modules]
+# Hyprland specific defaults
+[modules.hyprland]
+enable_animations = true
+animation_speed = 5
+default_monitor = "eDP-1"
+startup_apps = ["waybar", "eww open bar", "hyprpaper"] # Array of strings
+
+# Eww (widgets) specific defaults
+[modules.eww]
+default_theme = "catppuccin-mocha"
+widgets_to_load = ["bar", "powermenu", "launcher"] # Array of strings
+panel_height_px = 32
+enable_tray = true
+
+# Alacritty (terminal emulator) specific defaults
+[modules.alacritty]
+font_size = 10.0
+# Array of strings for additional options
+terminal_options = [
+    "opacity = 0.8",
+    "padding.x = 8",
+    "padding.y = 8"
+]
+theme_file = "~/.config/alacritty/themes/default.toml"
+
+# Neovim specific defaults
+[modules.nvim]
+plugins_enabled = true
+default_colorscheme = "tokyonight"
+spellcheck_languages = ["en_us", "sk"] # Array of strings (metric system influence)
+
+# Profiles configuration
+# This section uses an Array of Tables, allowing you to define multiple distinct profiles.
+# Each [[profiles]] block represents a single profile.
+[[profiles]]
+name = "pc-profile"
+description = "Settings for a stationary desktop PC setup."
+# Basic machine type distinction for easy filtering
+machine_type = "desktop"
+hostname_pattern = "desktop-*" # Pattern for hostnames belonging to this profile
+
+# Display settings specific to this profile
+main_display_name = "eDP-1"
+display_arrangement = "side-by-side" # e.g., "side-by-side", "stacked"
+monitor_configs = ["eDP-1,1920x1080@144,0x0,1", "DP-1,2560x1440@165,1920x0,1"] # Array of strings
+enable_extra_monitors = true
+primary_display_output = "eDP-1" # Explicitly define the primary display output
+
+# Other profile-specific settings
+default_wallpaper = "~/wallpapers/pc_wallpaper.jpg"
+hyprland_layout = "master"
+eww_config = "eww/config/desktop.yuck"
+bluetooth_auto_connect = false
+performance_mode = true
+# Array of key-value pairs specific to this profile (can be inline tables or simple strings)
+environment_overrides = [
+    { KEY = "GAMING_MODE", VALUE = "1" },
+    { KEY = "WAYLAND_DISPLAY_SCALE", VALUE = "1" }
+]
+default_shell = "zsh"
+
+[[profiles]]
+name = "laptop-profile"
+description = "Settings for a portable laptop setup."
+machine_type = "laptop"
+hostname_pattern = "laptop-*" # Pattern for hostnames belonging to this profile
+
+# Display settings specific to this profile
+main_display_name = "eDP-1" # Often the built-in display for a laptop
+display_arrangement = "single"
+monitor_configs = ["eDP-1,1920x1080@60,0x0,2"] # Scaling for high-DPI (e.g., 2 for 2x scaling)
+enable_extra_monitors = false
+primary_display_output = "eDP-1"
+
+# Other profile-specific settings
+default_wallpaper = "~/wallpapers/laptop_travel.jpg"
+hyprland_layout = "dwindle"
+eww_config = "eww/config/laptop.yuck"
+bluetooth_auto_connect = true
+performance_mode = false
+environment_overrides = [
+    { KEY = "POWER_SAVING_MODE", VALUE = "1" },
+    { KEY = "MOZ_ENABLE_WAYLAND", VALUE = "1" }
+]
+default_shell = "zsh"
+
+# You can add more profiles as needed using the same [[profiles]] syntax
+# [[profiles]]
+# name = "work-profile"
+# description = "Optimized for productivity"
+# machine_type = "desktop" # or "laptop"
+# hostname_pattern = "work-machine-*"
+# ... and so on ...
+

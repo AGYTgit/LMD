@@ -1,0 +1,27 @@
+[global]
+author = "AGYT"
+email = "your.email@example.com"
+repo-url = "https://github.com/yourName/dotfiles"
+repo-ssh = "git@github.com:yourName/dotfiles.git"
+last-updated = 2025-06-15T16:00:00+02:00
+platform = "pc"
+
+[devices]
+displays = ["DP-1", "HDMI-A-1"]
+
+[modules]
+enabled = ["hyprterm", "eww", "hypr", "hyprcursor", "hypridle", "hyprlock", "hyprpaper", "hyprshade", "nvim", "wofi"]
+disabled = []
+
+[modules.hypr]
+startup-apps = ["hyprpaper", "eww"] # zen, discord
+
+[modules.hyprppaper]
+wallpapers = ["wallpaper_7.jpg"]
+
+[modules.eww]
+theme = "catppuccin-mocha"
+widgets-to-load = ["hyprbar"]
+
+[modules.nvim]
+theme = "tokyonight"
