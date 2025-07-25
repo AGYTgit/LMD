@@ -1,30 +1,35 @@
 (defwindow hyprbar :class "hyprbar"
 	:monitor 1
-	:geometry (geometry :anchor "top center" :x "0" :y "5px" :width "1910px" :height "32px")
+	:geometry (geometry :anchor "center left" :x "0px" :y "0px" :width "64px" :height "1080px")
 	:exclusive "true"
 
 
-	(box :orientation "h" :space-evenly true
-		(box :halign "start"
-			(menu)
+	(box :orientation "v" :space-evenly true
+		(box :class "hyprbar-left" :valign "start" :orientation "v" :space-evenly false
+            (menu)
+            (box :class "workspace_widget" :orientation "h" :space-evenly false :valign "end" :halign "center"
+                (workspaces :workspace-lis workspaces-primary-lis)
+                (workspaces :workspace-lis workspaces-secondary-lis)
+            )
 		)
-		(box :class "workspace_widget" :orientation "h" :space-evenly "false" :halign "center"
-			(workspaces :workspace-lis workspaces-primary-lis)
+		(box :class "hyprbar-center" :valign "center"
 		)
-		(box :orientation "h" :space-evenly false :halign "end"
-			(battery)
-			(separator)
-			(clock)
-			(separator)
-			(date)
+		(box :class "hyprbar-right" :valign "end"
+            (box :orientation "v" :space-evenly false
+                (battery)
+                (separator)
+                (clock)
+                (separator)
+                (date)
+            )
 		)
 	)
 )
 
-(deflisten workspaces-primary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'eDP-1' 0")
-(deflisten workspaces-secondary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'eDP-1' 0")
+(deflisten workspaces-primary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'eDP-1' 1 0")
+(deflisten workspaces-secondary-lis :initial "[]" "zsh scripts/get-workspaces.sh 'HDMI-A-1' 1 0")
 (defwidget workspaces [workspace-lis]
-	(box
+	(box :orientation "v" :halign "center" :valign "end"
 		(for workspace in workspace-lis
 			(image :class "workspace-entry ${workspace.active ? 'active' : 'inactive'}"
 				:image-width 11
@@ -35,30 +40,32 @@
 )
 
 (defwidget separator []
-	(label :text "|" :class "separator-line")
+	(label :text "-" :class "separator-line")
 )
 
 (defpoll BATTERY :interval "10s" `cat /sys/class/power_supply/BAT1/capacity`)
 (defwidget battery []
-	(box :class "battery" :orientation "h" :space-evenly false :halign "end"
+	(box :class "battery" :orientation "h" :space-evenly false :halign "center"
 		(box
 			(label :text BATTERY)
 		)
 	)
 )
 
-(defpoll TIME :interval "1s" `date +\"%I:%M"`)
+(defpoll TIME :interval "1s" `date +\"%I
+%M"`)
 (defwidget clock []
-	(box :class "clock" :orientation "h" :space-evenly false :halign "end"
+	(box :class "clock" :orientation "h" :space-evenly false :halign "center"
 		(box
 			(label :text TIME)
 		)
 	)
 )
 
-(defpoll DATE :interval "1s" `date +\"%d-%m-%Y"`)
+(defpoll DATE :interval "1s" `date +\"%d
+%m"`)
 (defwidget date []
-	(box :class "date" :orientation "h" :space-evenly false :halign "end"
+	(box :class "date" :orientation "h" :space-evenly false :halign "center"
 		(box
 			(label :text DATE)
 		)
@@ -66,7 +73,7 @@
 )
 
 (defwidget menu []
-	(box :class "menu" :orientation "h" :space-evenly false :halign "start"
+	(box :class "menu" :orientation "h" :space-evenly false :halign "center"
 		(image :image-width 24
 			:path "assets/snowflake.png"
 		)

@@ -7,10 +7,11 @@ get_fullscreen_monitor() {
 	current_state=$(hyprctl activeworkspace -j | jq -r "select(.monitor == \"$monitor\") | .hasfullscreen")
 
     if [[ "$current_state" != "$prev_state" && "$current_state" != '' ]]; then
-		if [[ "$current_state" == false ]]; then
-			eww open hyprbar --screen 0
-        else
-            eww close hyprbar
+		echo $(eww close hyprbar)
+		if [[ "$current_state" == true ]]; then
+			echo $(eww open hyprbar --screen 0)
+		else
+			echo $(eww open hyprbar --screen 1)
 		fi
 
 		prev_state="$current_state"

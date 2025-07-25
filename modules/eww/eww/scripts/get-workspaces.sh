@@ -1,11 +1,12 @@
 #!/bin/zsh
 
 monitor=$1
-reverse=$2
+dynamicVisibility=$2
+reverse=$3
 
 prev_state=""
 get_workspaces() {
-    current_state=$(./scripts/get-workspaces "$monitor" "$reverse")
+    current_state=$(./scripts/get-workspaces "$monitor" "$dynamicVisibility" "$reverse")
 
     if [[ "$current_state" != "$prev_state" && "$current_state" != "[]" ]]; then
         echo "$current_state"
