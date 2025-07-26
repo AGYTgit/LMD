@@ -5,6 +5,10 @@ blur = true
 [colors.primary]
 background = '#060606'
 
+[[keyboard.bindings]]
+key = "Backspace"
+mods = "Control"
+action = "None"
 
 
 [font]
