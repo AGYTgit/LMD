@@ -1,5 +1,5 @@
 (defwindow hyprbar :class "hyprbar"
-	:monitor 1
+	:monitor 0
 	:geometry (geometry :anchor "center left" :x "0px" :y "0px" :width "64px" :height "1080px")
 	:exclusive "true"
 
