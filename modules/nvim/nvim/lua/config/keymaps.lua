@@ -15,12 +15,20 @@ local function delete_comment_and_trim()
 
   local earliest_comment_pos = nil
 
-  local slash_comment_start = line_content:find("//", 1, true)
-  local hash_comment_start = line_content:find("#", 1, true)
-  local dash_comment_start = line_content:find("--", 1, true)
+  local slash_comment_start = line_content:find(" // ", 1, true)
+  local slash_star_comment_start = line_content:find(" /* ", 1, true)
+  local hash_comment_start = line_content:find(" # ", 1, true)
+  local dash_comment_start = line_content:find(" -- ", 1, true)
+  local semicolon_comment_start = line_content:find(" ; ", 1, true)
 
   if slash_comment_start then
     earliest_comment_pos = slash_comment_start
+  end
+
+  if slash_star_comment_start then
+    if not earliest_comment_pos or slash_star_comment_start < earliest_comment_pos then
+      earliest_comment_pos = slash_star_comment_start
+    end
   end
 
   if hash_comment_start then
@@ -32,6 +40,12 @@ local function delete_comment_and_trim()
   if dash_comment_start then
     if not earliest_comment_pos or dash_comment_start < earliest_comment_pos then
       earliest_comment_pos = dash_comment_start
+    end
+  end
+
+  if semicolon_comment_start then
+    if not earliest_comment_pos or semicolon_comment_start < earliest_comment_pos then
+      earliest_comment_pos = semicolon_comment_start
     end
   end
 
