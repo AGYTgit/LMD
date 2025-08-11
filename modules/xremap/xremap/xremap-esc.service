@@ -1,0 +1,14 @@
+[Unit]
+Description=xremap service
+
+[Service]
+Type=simple
+KillMode=process
+
+ExecStart=xremap /home/agyt/.dotfiles/LMD/modules/xremap/xremap/keybinds/esc.yml
+
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target
