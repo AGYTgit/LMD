@@ -1,3 +1,10 @@
+modmap:
+  - name: "Ergonomic Shift"
+    remap:
+      # --- MODS ---
+      KEY_LEFTSHIFT: KEY_BACKSPACE
+      KEY_RIGHTSHIFT: delete
+      KEY_RIGHTALT: KEY_LEFTSHIFT
 keymap:
   - name: "Wannabe Programmers Dvorak"
     exact_match: true
