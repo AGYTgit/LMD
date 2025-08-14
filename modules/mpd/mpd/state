@@ -1,9 +1,9 @@
 sw_volume: 50
 audio_device_state:1:mpd-pipewire
 audio_device_state:1:ncmpcpp_visualizer
-state: pause
+state: play
 current: 115
-time: 114.72
+time: 46.49
 random: 1
 repeat: 1
 single: 1
