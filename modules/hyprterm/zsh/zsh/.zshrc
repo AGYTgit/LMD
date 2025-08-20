@@ -12,4 +12,7 @@ bindkey "^k" up-line-or-history
 bindkey "^l" forward-char
 bindkey ";" clear-screen
 
+bindkey "^b" backward-word
+bindkey "^n" forward-word
+
 eval "$(starship init zsh)"
