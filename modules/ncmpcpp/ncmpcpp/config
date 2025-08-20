@@ -1,0 +1,5 @@
+mpd_host = "localhost"
+mpd_port = "6600"
+
+visualizer_data_source = "/tmp/mpd.fifo"
+visualizer_output_name = "ncmpcpp_visualizer"
