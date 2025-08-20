@@ -9,6 +9,7 @@ const float SATTURATION_MULTIPLIER = 1.0;
 const vec3 VIB_RGB_BALANCE = vec3(1.0, 1.0, 1.0);
 const float VIB_STRENGTH = 0.45;
 const vec3 VIB_COEFF = VIB_RGB_BALANCE * VIB_STRENGTH * -1.0;
+const float BRIGHTNESS = 0.8;
 
 void main() {
     vec4 pixRGBA = texture2D(tex, v_texcoord);
@@ -23,9 +24,9 @@ void main() {
 
     vec3 adjustmentFact = (sign(VIB_COEFF) * satturation - 1.0) * VIB_COEFF + 1.0;
 
-    pixRGBA[0] = mix(luma, color[0], adjustmentFact[0]);
-    pixRGBA[1] = mix(luma, color[1], adjustmentFact[1]);
-    pixRGBA[2] = mix(luma, color[2], adjustmentFact[2]);
+    pixRGBA[0] = mix(luma, color[0], adjustmentFact[0]) * BRIGHTNESS;
+    pixRGBA[1] = mix(luma, color[1], adjustmentFact[1]) * BRIGHTNESS;
+    pixRGBA[2] = mix(luma, color[2], adjustmentFact[2]) * BRIGHTNESS;
 
     gl_FragColor = pixRGBA;
 }
