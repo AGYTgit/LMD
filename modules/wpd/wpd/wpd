@@ -19,14 +19,14 @@ xkb_symbols "basic" {
     key <AE02>  {[  2,            bracketleft   ]};
     key <AE03>  {[  3,            braceleft     ]};
     key <AE04>  {[  4,            parenleft     ]};
-    key <AE05>  {[  5,            equal         ]};
-    key <AE06>  {[  6,            percent       ]};
+    key <AE05>  {[  5,            percent       ]};
+    key <AE06>  {[  numbersign,   at            ]};
     key <AE07>  {[  asciicircum,  grave         ]};
-    key <AE08>  {[  7,            at            ]};
-    key <AE09>  {[  8,            parenright    ]};
-    key <AE10>  {[  9,            braceright    ]};
-    key <AE11>  {[  0,            bracketright  ]};
-    key <AE12>  {[  question,     minus         ]};
+    key <AE08>  {[  6,            equal         ]};
+    key <AE09>  {[  7,            parenright    ]};
+    key <AE10>  {[  8,            braceright    ]};
+    key <AE11>  {[  9,            bracketright  ]};
+    key <AE12>  {[  0,            minus         ]};
 
     // Top Row
     key <AD01>  {[  semicolon,    colon         ]};
@@ -41,7 +41,7 @@ xkb_symbols "basic" {
     key <AD10>  {[  r,            R             ]};
     key <AD11>  {[  l,            L             ]};
     key <AD12>  {[  slash,        exclam        ]};
-    key <BKSL>  {[  backslash,    numbersign    ]};
+    key <BKSL>  {[  backslash,    question      ]};
 
     // Mid Row
     key <AC01>  {[  a,            A             ]};
