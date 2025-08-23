@@ -1,0 +1,3 @@
+[submodule "modules/qs/hyprbar"]
+	path = modules/qs/hyprbar
+	url = git@github.com:AGYTgit/qs.git
