@@ -6,9 +6,8 @@ xkb_symbols "basic" {
     name[Group1] = "English (Wannabe Programmers Dvorak)";
 
     // Modifiers
-    key <LFSH>  {[  BackSpace  ]};
-    key <RTSH>  {[  Delete     ]};
-    key <RALT>  {[  Shift_L    ]};
+    key <RALT>  {[  Shift_R  ]};
+    key <RTSH>  {[  Delete   ]};
 
     // Better Escape
     // key <CAPS>  {[  Escape  ], actions[Group1] = [  NoAction()  ]};
