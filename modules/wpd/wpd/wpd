@@ -15,18 +15,18 @@ xkb_symbols "basic" {
 
     // Number Row
     key <TLDE>  {[  dollar,       asciitilde    ]};
-    key <AE01>  {[  1,            plus          ]};
+    key <AE01>  {[  1,            minus          ]};
     key <AE02>  {[  2,            bracketleft   ]};
     key <AE03>  {[  3,            braceleft     ]};
     key <AE04>  {[  4,            parenleft     ]};
     key <AE05>  {[  5,            percent       ]};
     key <AE06>  {[  numbersign,   at            ]};
     key <AE07>  {[  asciicircum,  grave         ]};
-    key <AE08>  {[  6,            equal         ]};
+    key <AE08>  {[  6,            plus         ]};
     key <AE09>  {[  7,            parenright    ]};
     key <AE10>  {[  8,            braceright    ]};
     key <AE11>  {[  9,            bracketright  ]};
-    key <AE12>  {[  0,            minus         ]};
+    key <AE12>  {[  0,            equal         ]};
 
     // Top Row
     key <AD01>  {[  semicolon,    colon         ]};
