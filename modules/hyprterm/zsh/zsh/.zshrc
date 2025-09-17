@@ -14,6 +14,6 @@ bindkey "^l" forward-char
 bindkey "^B" backward-word
 bindkey "^N" forward-word
 
-bindkey ";" clear-screen
+bindkey "^" clear-screen
 
 eval "$(starship init zsh)"
