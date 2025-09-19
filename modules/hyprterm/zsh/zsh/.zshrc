@@ -10,7 +10,7 @@ bindkey "^h" backward-char
 bindkey "^j" down-line-or-history
 bindkey "^k" up-line-or-history
 bindkey "^l" forward-char
-bindkey ";" clear-screen
+bindkey "^" clear-screen
 
 bindkey "^b" backward-word
 bindkey "^n" forward-word
