@@ -16,4 +16,6 @@ bindkey "^N" forward-word
 
 bindkey "^" clear-screen
 
+export EDITOR=nvim
+
 eval "$(starship init zsh)"
