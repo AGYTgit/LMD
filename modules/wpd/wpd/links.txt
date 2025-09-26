@@ -1,3 +1,1 @@
-wpd -> /usr/share/X11/xkb/symbols/wpd
-evdev.xml -> /usr/share/X11/rules/evdev.xml
-evdev.lst -> /usr/share/X11/rules/evdev.lst
+pwd -> /usr/share/X11/xkb/symbols/wpd
