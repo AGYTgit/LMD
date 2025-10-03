@@ -15,4 +15,6 @@ bindkey "^" clear-screen
 bindkey "^b" backward-word
 bindkey "^n" forward-word
 
+export EDITOR=nvim
+
 eval "$(starship init zsh)"
