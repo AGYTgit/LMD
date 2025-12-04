@@ -18,6 +18,15 @@ return {
   },
 
   {
+    "folke/snacks.nvim",
+    opts = {
+      scroll = {
+        enabled = false,
+      },
+    },
+  },
+
+  {
     "nvim-telescope/telescope.nvim",
     keys = {
       -- add a keymap to browse plugin files
