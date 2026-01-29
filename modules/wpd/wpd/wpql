@@ -10,8 +10,8 @@ xkb_symbols "basic" {
     key.type[Group1] = "FOUR_LEVEL";
 
     // Better Escape
-    // key <CAPS>  {[  Escape  ],  actions[Group1] = [  NoAction()  ]};
-    // key <ESC>   {[  F13  ]};
+    key <CAPS>  {[  Escape  ],  actions[Group1] = [  NoAction()  ]};
+    key <ESC>   {[  F13  ]};
 
     // RAlt as lv3_shift
     key <RALT> {[  ISO_Level3_Shift,  ISO_Level3_Shift,  ISO_Level3_Shift,  ISO_Level3_Shift  ]};
