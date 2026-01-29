@@ -17,4 +17,6 @@ bindkey "^n" forward-word
 
 export EDITOR=nvim
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 eval "$(starship init zsh)"
