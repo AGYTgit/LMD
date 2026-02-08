@@ -66,8 +66,8 @@ xkb_symbols "basic" {
     // Bottom Row
     key <AB01>  {[  z,       Z,       grave,      noSymbol  ]};
     key <AB02>  {[  q,       Q,       at,         noSymbol  ]};
-    key <AB03>  {[  j,       J,       plus,       noSymbol  ]};
-    key <AB04>  {[  k,       K,       minus,      noSymbol  ]};
+    key <AB03>  {[  j,       J,       minus,      noSymbol  ]};
+    key <AB04>  {[  k,       K,       plus,       noSymbol  ]};
     key <AB05>  {[  comma,   comma,   comma,      comma     ]};
     key <AB06>  {[  period,  period,  period,     period    ]};
     key <AB07>  {[  b,       B,       equal,      noSymbol  ]};
