@@ -36,40 +36,40 @@ xkb_symbols "basic" {
     key <AE12>  {[  0,         0,         0,         0         ]};
 
     // Top Row
-    key <AD01>  {[  x,           X,         dollar,       noSymbol  ]};
-    key <AD02>  {[  f,           F,         numbersign,   noSymbol  ]};
-    key <AD03>  {[  y,           Y,         percent,      noSymbol  ]};
-    key <AD04>  {[  p,           P,         asterisk,     noSymbol  ]};
-    key <AD05>  {[  semicolon,   semicolon,     semicolon,   semicolon  ]};
-    key <AD06>  {[  quotedbl,    quotedbl,  quotedbl,     quotedbl  ]};
-    key <AD07>  {[  underscore,  underscore,  underscore,  underscore  ]};
-    key <AD08>  {[  g,           G,         ampersand,    noSymbol  ]};
-    key <AD09>  {[  c,           C,         question,     noSymbol  ]};
-    key <AD10>  {[  r,           R,         exclam,       noSymbol  ]};
-    key <AD11>  {[  l,           L,         colon,     noSymbol  ]};
-    key <AD12>  {[  noSymbol,    noSymbol,  noSymbol,     noSymbol  ]};
-    key <BKSL>  {[  Delete,      Delete,    Delete,       Delete    ]};
+    key <AD01>  {[  x,           X,          dollar,       noSymbol    ]};
+    key <AD02>  {[  f,           F,          numbersign,   noSymbol    ]};
+    key <AD03>  {[  y,           Y,          percent,      noSymbol    ]};
+    key <AD04>  {[  p,           P,          asterisk,     noSymbol    ]};
+    key <AD05>  {[  semicolon,   semicolon,  semicolon,    semicolon   ]};
+    key <AD06>  {[  quotedbl,    quotedbl,   quotedbl,     quotedbl    ]};
+    key <AD07>  {[  underscore,  underscore, underscore,   underscore  ]};
+    key <AD08>  {[  g,           G,          ampersand,    noSymbol    ]};
+    key <AD09>  {[  c,           C,          question,     noSymbol    ]};
+    key <AD10>  {[  r,           R,          exclam,       noSymbol    ]};
+    key <AD11>  {[  l,           L,          colon,        noSymbol    ]};
+    key <AD12>  {[  noSymbol,    noSymbol,   noSymbol,     noSymbol    ]};
+    key <BKSL>  {[  Delete,      Delete,     Delete,       Delete      ]};
 
     // Mid Row
-    key <AC01>  {[  a,         A,        less,          1         ]};
-    key <AC02>  {[  o,         O,        braceleft,     2         ]};
-    key <AC03>  {[  e,         E,        bracketleft,   3         ]};
-    key <AC04>  {[  u,         U,        parenleft,     4         ]};
-    key <AC05>  {[  i,         I,        asciitilde,      5         ]};
-    key <AC06>  {[  apostrophe,  apostrophe, apostrophe,      apostrophe  ]};
-    key <AC07>  {[  d,         D,        asciicircum,    6         ]};
-    key <AC08>  {[  h,         H,        parenright,    7         ]};
-    key <AC09>  {[  t,         T,        bracketright,  8         ]};
-    key <AC10>  {[  n,         N,        braceright,    9         ]};
-    key <AC11>  {[  s,         S,        greater,       0         ]};
+    key <AC01>  {[  a,           A,          less,          1           ]};
+    key <AC02>  {[  o,           O,          braceleft,     2           ]};
+    key <AC03>  {[  e,           E,          bracketleft,   3           ]};
+    key <AC04>  {[  u,           U,          parenleft,     4           ]};
+    key <AC05>  {[  i,           I,          asciitilde,    5           ]};
+    key <AC06>  {[  apostrophe,  apostrophe, apostrophe,    apostrophe  ]};
+    key <AC07>  {[  d,           D,          asciicircum,   6           ]};
+    key <AC08>  {[  h,           H,          parenright,    7           ]};
+    key <AC09>  {[  t,           T,          bracketright,  8           ]};
+    key <AC10>  {[  n,           N,          braceright,    9           ]};
+    key <AC11>  {[  s,           S,          greater,       0           ]};
 
     // Bottom Row
     key <AB01>  {[  z,       Z,        grave,      noSymbol  ]};
     key <AB02>  {[  q,       Q,        at,         noSymbol  ]};
-    key <AB03>  {[  j,       J,        plus,       noSymbol  ]};
-    key <AB04>  {[  k,       K,        minus,      noSymbol  ]};
-    key <AB05>  {[  comma,   comma, comma,   comma  ]};
-    key <AB06>  {[  period,  period, period,   period  ]};
+    key <AB03>  {[  j,       J,        minus,      noSymbol  ]};
+    key <AB04>  {[  k,       K,        plus,       noSymbol  ]};
+    key <AB05>  {[  comma,   comma,    comma,      comma     ]};
+    key <AB06>  {[  period,  period,   period,     period    ]};
     key <AB07>  {[  b,       B,        equal,      noSymbol  ]};
     key <AB08>  {[  m,       M,        slash,      noSymbol  ]};
     key <AB09>  {[  w,       W,        backslash,  noSymbol  ]};
