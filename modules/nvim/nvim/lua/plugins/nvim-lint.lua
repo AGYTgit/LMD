@@ -1,0 +1,21 @@
+return {
+	-- "mfussenegger/nvim-lint",
+	-- event = "BufReadPost",
+	-- config = function()
+	-- 	local lint = require("lint")
+	--
+	-- 	lint.linters_by_ft = {
+	-- 		sh = { "shellcheck" },
+	-- 		yaml = { "yamllint" },
+	-- 		json = { "jsonlint" },
+	-- 		lua = { "luacheck" },
+	-- 		markdown = { "markdownlint" },
+	-- 	}
+	--
+	-- 	vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost" }, {
+	-- 		callback = function()
+	-- 			lint.try_lint()
+	-- 		end,
+	-- 	})
+	-- end,
+}

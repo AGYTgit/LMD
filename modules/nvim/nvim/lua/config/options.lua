@@ -1,35 +1,67 @@
-vim.cmd("autocmd BufWritePost init.lua source <afile>")
+local opt = vim.opt
 
-vim.cmd("let g:netrw_liststyle = 3")
+-- ui
+opt.number = true
+opt.relativenumber = true
+opt.numberwidth = 2
 
-local o = vim.opt
+-- cursor
+opt.cursorline = true
+opt.signcolumn = "yes"
 
--- numbers on the left
-o.relativenumber = true
-o.number = true
+-- color fix
+opt.termguicolors = true
 
--- tabs & indentation
-o.tabstop = 4
-o.shiftwidth = 4
-o.expandtab = true
-o.autoindent = true
+-- scroll
+opt.scrolloff = 8
+opt.sidescrolloff = 8
 
--- line wrapping
-o.wrap = true
-o.linebreak = true
+-- wrap
+opt.wrap = true
+opt.linebreak = true
 
--- search settings
-o.ignorecase = true
-o.smartcase = true
+-- mode
+opt.showmode = false
+opt.showcmd = true
+opt.showcmdloc = "statusline"
 
--- split behaviour
-o.splitright = true
-o.splitbelow = true
+-- indentation
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.softtabstop = 4
+opt.expandtab = true
+opt.smartindent = true
 
--- synced clipboard
-o.clipboard:append("unnamedplus")
+-- search
+opt.ignorecase = true
+opt.smartcase = true
+opt.hlsearch = true
+opt.incsearch = true
 
--- syntax highlight
-vim.cmd([[syntax on]])
+-- splits
+opt.splitright = true
+opt.splitbelow = true
 
-vim.o.scrolloff = 999
+-- files
+opt.swapfile = true
+opt.backup = false
+opt.undofile = true
+opt.undodir = vim.fn.stdpath("data") .. "/undodir"
+
+-- performance
+opt.updatetime = 250
+opt.timeoutlen = 300
+
+-- completion
+opt.completeopt = { "menuone", "noselect" }
+
+-- clipboard sync
+opt.clipboard:append("unnamedplus")
+
+-- rust formatter
+vim.g.rustfmt_autosave = 0
+
+-- transparency
+-- settings are in tokyonight.lua
+
+-- opt.signcolumn = "yes"
