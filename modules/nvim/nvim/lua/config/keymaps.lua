@@ -1,29 +1,57 @@
--- swap : and ;
-vim.cmd([[
-    noremap : ;
-    noremap ; :
-]])
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
-local k = vim.keymap
+local function map(modes, lhs, rhs, opts)
+	vim.keymap.set(modes, lhs, rhs, opts or {})
+end
 
-vim.g.mapleader = ","
+-- swap : with ;
+map({ "n", "v" }, ";", ":")
+map({ "n", "v" }, ":", ";")
 
--- delete comment -- needs a fix, deletes more then it should if there is no space before the comment, also works only for / as a start of the comment indicator
-k.set("n", "<leader>dc", "0f/v$hxviwx", { noremap = true, silent = true })
+-- center cursor after jump
+map("n", "<C-u>", "<C-u>zz")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "j", "jzz")
+map("n", "k", "kzz")
+map("n", "<S-g>", "<S-g>zz")
 
--- clear search
-k.set("n", "<leader>h", "<cmd>nohl<CR>", { noremap = true, silent = true })
-
--- create split
-k.set("n", "<leader>sh", "<C-w>v", { noremap = true, silent = true })
-k.set("n", "<leader>sv", "<C-w>s", { noremap = true, silent = true })
-
--- open nvim-tree
-k.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+-- lazy menu
+map({ "n" }, "<leader>l", "<cmd>Lazy<CR>")
 
 -- telescope
-vim.g.telescope_key = " "
-k.set("n", vim.g.telescope_key .. "f", "<cmd>Telescope find_files<CR>", { noremap = true, silent = true })
-k.set("n", vim.g.telescope_key .. "g", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
-k.set("n", vim.g.telescope_key .. "b", "<cmd>Telescope buffers<CR>", { noremap = true, silent = true })
-k.set("n", vim.g.telescope_key .. "h", "<cmd>Telescope help_tags<CR>", { noremap = true, silent = true })
+map({ "n" }, "<leader><leader>", "<cmd>Telescope find_files<CR>")
+map({ "n" }, "<leader>/", "<cmd>Telescope live_grep<CR>")
+map({ "n" }, "<leader>h", "<cmd>Telescope keymaps<CR>")
+map({ "n" }, "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Search todos" })
+
+-- snacks notification
+map("n", "<leader>n", function()
+	Snacks.notifier.show_history()
+end, { desc = "Notification history" })
+
+-- trouble diagnostics
+map("n", "<leader>x", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics" })
+map("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+map("n", "}-", function()
+	vim.diagnostic.jump({ count = 1 })
+end, { desc = "Next diagnostic" })
+map("n", "}+", function()
+	vim.diagnostic.jump({ count = -1 })
+end, { desc = "Prev diagnostic" })
+map("n", "]-", function()
+	vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR })
+end, { desc = "Next error" })
+map("n", "]+", function()
+	vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR })
+end, { desc = "Prev error" })
+
+-- lsp
+map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
+
+-- cancel highlight
+map("n", "<esc>", "<cmd>nohlsearch<cr>")
+
+-- preserve select after </>
+map("v", "<", "<gv")
+map("v", ">", ">gv")
