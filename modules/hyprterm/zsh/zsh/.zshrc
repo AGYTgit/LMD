@@ -5,6 +5,7 @@ source "$HOME/.dotfiles/LMD/variables/path.env"
 alias l="ls -la --color -h --group-directories-first"
 alias q="cd .."
 alias t="tree -aCI .git --dirsfirst"
+alias tt="t -L 2"
 
 alias lines="find . -type f -name '*.c' -o -name '*.h' | xargs wc -l"
 
