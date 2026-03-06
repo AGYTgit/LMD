@@ -25,6 +25,11 @@ map({ "n" }, "<leader>/", "<cmd>Telescope live_grep<CR>")
 map({ "n" }, "<leader>h", "<cmd>Telescope keymaps<CR>")
 map({ "n" }, "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Search todos" })
 
+-- harpoon
+map("n", "<leader>fh", function()
+  require("telescope").extensions.harpoon.marks({ cwd = vim.g.launch_cwd, prompt_title = "Harpoon" })
+end, { desc = "Harpoon marks" })
+
 -- snacks notification
 map("n", "<leader>n", function()
 	Snacks.notifier.show_history()

@@ -1,7 +1,7 @@
 return {
-	"ahmedkhalf/project.nvim",
-	config = function()
-		require("project_nvim").setup({})
-	end,
-	lazy = false,
+	-- "ahmedkhalf/project.nvim",
+	-- config = function()
+	-- 	require("project_nvim").setup({})
+	-- end,
+	-- lazy = false,
 }
