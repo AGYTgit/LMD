@@ -7,6 +7,10 @@ return {
 	config = function()
 		local colors = require("tokyonight.colors").setup()
 
+		vim.api.nvim_create_autocmd({ "RecordingEnter", "RecordingLeave" }, {
+			callback = function() require("lualine").refresh() end,
+		})
+
 		require("lualine").setup({
 			options = {
 				theme = "tokyonight",
@@ -38,14 +42,21 @@ return {
 						separator = { right = "" },
 					},
 					{
-						function()
-							return vim.fn.expand("%:t")
-						end,
+						function() return vim.fn.expand("%:t") end,
 						color = { fg = colors.fg },
 						padding = { left = 0, right = 1 },
 					},
 				},
-				lualine_x = {},
+				lualine_x = {
+					{
+						function()
+							local reg = vim.fn.reg_recording()
+							if reg ~= "" then return " @" .. reg end
+							return ""
+						end,
+						color = { fg = colors.red },
+					},
+				},
 				lualine_y = { { "diff", symbols = { added = " ", modified = " ", removed = " " } } },
 				lualine_z = { "location" },
 			},
