@@ -1,3 +1,5 @@
+local modName = "[Conform] "
+
 return {
 	"stevearc/conform.nvim",
 	config = function()
@@ -5,7 +7,6 @@ return {
 			formatters_by_ft = {
 				rust = { "rustfmt" },
 				c = { "clang_format" },
-				java = { "google-java-format" },
 				sh = { "shfmt" },
 				yaml = { "prettier" },
 				json = { "prettier" },
@@ -13,9 +14,8 @@ return {
 				lua = { "stylua" },
 			},
 		})
-
-		vim.keymap.set("n", "<leader>f", function()
-			require("conform").format()
-		end, { desc = "Format file" })
 	end,
+	keys = {
+		{ "<leader>f", function() require("conform").format({ async = true, lsp_fallback = true, timeout_ms = 500 }) end, mode = "n", desc = modName .. "Format file" },
+	},
 }

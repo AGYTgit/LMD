@@ -1,3 +1,5 @@
+local modName = "[Lazy] "
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.uv.fs_stat(lazypath) then
@@ -17,4 +19,5 @@ require("lazy").setup("plugins", {
 	ui = {
 		border = "rounded",
 	},
+    vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = modName .. "Open Lazy" })
 })

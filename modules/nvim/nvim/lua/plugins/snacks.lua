@@ -1,3 +1,5 @@
+local modName = "[Snacks] "
+
 return {
 	"folke/snacks.nvim",
 	priority = 1000,
@@ -12,12 +14,12 @@ return {
 			bufdelete = { enabled = true },
 			input = { enabled = true },
 			picker = {
-				nabled = true,
+				enabled = true,
 				win = {
 					input = {
-						keys = {
-							["<esc>"] = { "close", mode = { "i", "n" } },
-						},
+						-- keys = {
+						-- 	["<leader><esc>"] = { "close", mode = { "i", "n" }, desc = modName .. "Close popup" },
+						-- },
 					},
 					wo = {
 						signcolumn = "no",
@@ -26,4 +28,7 @@ return {
 			},
 		})
 	end,
+	keys = {
+		{ "<leader>n", function() require("snacks").notifier.show_history() end, mode = "n", desc = modName .. "Notification popup" },
+	},
 }

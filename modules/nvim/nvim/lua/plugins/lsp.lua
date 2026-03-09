@@ -1,9 +1,14 @@
+local modName = "[Lsp] "
+
 return {
 	{
 		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
 		end,
+        keys = {
+            { "<leader>ca", vim.lsp.buf.code_action, mode = "n", desc = modName .. "Code actions" },
+        },
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
@@ -14,12 +19,12 @@ return {
 					"rust_analyzer",
 					"clangd",
 					"jdtls",
+					"bashls",
+					"yamlls",
 					"taplo",
-					"lua_ls",
-					-- "bashls",  -- ERROR: mason fails to install these
-					-- "yamlls",
-					-- "jsonls",
-					-- "dockerls",
+					"stylua",
+					"jsonls",
+					"dockerls",
 				},
 				automatic_installation = true,
 			})
