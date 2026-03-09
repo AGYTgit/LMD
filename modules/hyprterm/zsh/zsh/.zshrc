@@ -4,7 +4,8 @@ source "$HOME/.dotfiles/LMD/variables/path.env"
 
 alias l="ls -la --color -h --group-directories-first"
 alias q="cd .."
-alias t="tree -aCI .git --dirsfirst"
+alias t="tree -aCI .git --dirsfirst -L 4"
+alias tt="tree -aCI .git --dirsfirst"
 
 bindkey "^h" backward-char
 bindkey "^j" down-line-or-history
