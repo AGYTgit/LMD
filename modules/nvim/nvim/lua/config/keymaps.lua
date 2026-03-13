@@ -9,6 +9,7 @@ end
 
 -- swap : with ;
 map({ "n", "v" }, ";", ":")
+map({ "n", "v" }, ":", ";")
 
 -- center cursor after jump
 map("n", "<C-u>", "<C-u>zz")
