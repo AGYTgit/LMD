@@ -28,3 +28,7 @@ map("n", "<esc>", "<cmd>nohlsearch<cr>")
 -- preserve select after </>
 map("v", "<", "<gv")
 map("v", ">", ">gv")
+
+-- move selected lines
+map("v", "<C-j>", ":m '>+1<CR>gv=gv", { desc = "Move lines down" })
+map("v", "<C-k>", ":m '<-2<CR>gv=gv", { desc = "Move lines up" })
