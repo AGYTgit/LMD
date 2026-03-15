@@ -2,6 +2,8 @@ unsetopt PROMPT_SP
 
 source "$HOME/.dotfiles/LMD/variables/path.env"
 
+alias bc="bluetoothctl"
+
 alias l="ls -la --color -h --group-directories-first"
 alias q="cd .."
 alias t="tree -aCI .git --dirsfirst"
