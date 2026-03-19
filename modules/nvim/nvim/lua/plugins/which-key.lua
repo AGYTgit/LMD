@@ -25,6 +25,7 @@ return {
 				{ "<leader>t", group = "Telescope" },
 				{ "<leader>h", group = "Harpoon" },
 				{ "<leader>q", group = "Session" },
+				{ "<leader>r", group = "Refactor" },
 				-- { "<leader>x", group = "Diagnostics" },
 			},
 		})
