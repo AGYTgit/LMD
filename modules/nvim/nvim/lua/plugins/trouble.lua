@@ -4,11 +4,7 @@ return {
 	"folke/trouble.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		require("trouble").setup({
-			filter = {
-				function(item) return item.source ~= "todo-comments" end,
-			},
-		})
+		require("trouble").setup({})
 
 		vim.diagnostic.config({
 			virtual_text = {
