@@ -1,0 +1,301 @@
+{
+    "initialTimestamp": "2026-03-21T11:26:40.664Z",
+    "startOfDay": "00:00",
+    "startOfWeek": "Monday",
+    "durationDefault": 14400,
+    "landingpage": "/activity/archlinux/view/",
+    "theme": "dark",
+    "newReleaseCheckData": {
+        "isEnabled": true,
+        "nextCheckTime": "2026-03-23T11:46:08.816Z",
+        "howOftenToCheck": 86400,
+        "timesChecked": 0
+    },
+    "userSatisfactionPollData": {
+        "isEnabled": true,
+        "nextPollTime": "2026-03-28T11:26:40.665Z",
+        "timesPollIsShown": 0
+    },
+    "classes": [
+        {
+            "data": {
+                "color": "#E27300"
+            },
+            "id": 0,
+            "name": [
+                "Art"
+            ],
+            "rule": {
+                "type": "none"
+            }
+        },
+        {
+            "data": {
+                "color": "#FDA1FF"
+            },
+            "id": 1,
+            "name": [
+                "Programming"
+            ],
+            "rule": {
+                "type": "none"
+            }
+        },
+        {
+            "data": {},
+            "id": 2,
+            "name": [
+                "Art",
+                "Image"
+            ],
+            "rule": {
+                "regex": "Inkscape | Krita",
+                "type": "regex"
+            }
+        },
+        {
+            "id": 3,
+            "name": [
+                "Art",
+                "3D"
+            ],
+            "rule": {
+                "regex": "Blender",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#F33"
+            },
+            "id": 4,
+            "name": [
+                "Browser",
+                "Media"
+            ],
+            "rule": {
+                "type": "none"
+            }
+        },
+        {
+            "data": {
+                "color": "#F33"
+            },
+            "id": 5,
+            "name": [
+                "Browser",
+                "Media",
+                "Video"
+            ],
+            "rule": {
+                "regex": "YouTube|hdtoday|aniwatch",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#FCC400"
+            },
+            "id": 6,
+            "name": [
+                "Browser",
+                "Media",
+                "Social Media"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "tiktok",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#A8FC00"
+            },
+            "id": 7,
+            "name": [
+                "Browser",
+                "Media",
+                "Music"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "ncmpcpp",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#009CE0"
+            },
+            "id": 8,
+            "name": [
+                "Games"
+            ],
+            "rule": {
+                "type": "none"
+            }
+        },
+        {
+            "data": {
+                "color": "#7B64FF"
+            },
+            "id": 9,
+            "name": [
+                "Discord"
+            ],
+            "rule": {
+                "regex": "Discord",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#000000"
+            },
+            "id": 10,
+            "name": [
+                "Browser"
+            ],
+            "rule": {
+                "regex": "Browser|Zen",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#68BC00"
+            },
+            "id": 11,
+            "name": [
+                "Programming",
+                "Terminal"
+            ],
+            "rule": {
+                "regex": "Alacritty",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#FA28FF"
+            },
+            "id": 12,
+            "name": [
+                "Programming",
+                "GitHub"
+            ],
+            "rule": {
+                "ignore_case": false,
+                "regex": "GitHub|git",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#009CE0"
+            },
+            "id": 13,
+            "name": [
+                "Programming",
+                "Nvim"
+            ],
+            "rule": {
+                "regex": "nvim|vim",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#999999"
+            },
+            "id": 14,
+            "name": [
+                "Unknown"
+            ],
+            "rule": {
+                "regex": "unknown",
+                "type": "regex"
+            }
+        }
+    ],
+    "views": [
+        {
+            "id": "summary",
+            "name": "Summary",
+            "elements": [
+                {
+                    "type": "top_apps",
+                    "size": 3
+                },
+                {
+                    "type": "top_titles",
+                    "size": 3
+                },
+                {
+                    "type": "timeline_barchart",
+                    "size": 3
+                },
+                {
+                    "type": "top_categories",
+                    "size": 3
+                },
+                {
+                    "type": "category_tree",
+                    "size": 3
+                },
+                {
+                    "type": "category_sunburst",
+                    "size": 3
+                }
+            ]
+        },
+        {
+            "id": "window",
+            "name": "Window",
+            "elements": [
+                {
+                    "type": "top_apps",
+                    "size": 3
+                },
+                {
+                    "type": "top_titles",
+                    "size": 3
+                }
+            ]
+        },
+        {
+            "id": "browser",
+            "name": "Browser",
+            "elements": [
+                {
+                    "type": "top_domains",
+                    "size": 3
+                },
+                {
+                    "type": "top_urls",
+                    "size": 3
+                }
+            ]
+        },
+        {
+            "id": "editor",
+            "name": "Editor",
+            "elements": [
+                {
+                    "type": "top_editor_files",
+                    "size": 3
+                },
+                {
+                    "type": "top_editor_projects",
+                    "size": 3
+                },
+                {
+                    "type": "top_editor_languages",
+                    "size": 3
+                }
+            ]
+        }
+    ],
+    "requestTimeout": 30
+}

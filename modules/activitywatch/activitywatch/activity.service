@@ -1,0 +1,14 @@
+[Unit]
+Description=ActivityWatch
+After=graphical-session.target
+
+[Service]
+Type=forking
+ExecStart=/bin/sh -c 'aw-qt --no-gui & sleep 5 && aw-awatcher &'
+ExecStop=/bin/sh -c 'pkill aw-qt; pkill aw-awatcher'
+Restart=on-failure
+Environment=XDG_RUNTIME_DIR=/run/user/%U
+
+[Install]
+WantedBy=default.target
+
