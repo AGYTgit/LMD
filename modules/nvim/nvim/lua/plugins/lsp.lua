@@ -4,10 +4,15 @@ return {
 	{
 		"williamboman/mason.nvim",
 		config = function()
-			require("mason").setup()
+			require("mason").setup({
+                ui = {
+                    border = "rounded",
+                }
+            })
 		end,
         keys = {
             { "<leader>ca", vim.lsp.buf.code_action, mode = "n", desc = modName .. "Code actions" },
+        { "<leader>m", "<cmd>Mason<cr>", mode = "n", desc = modName .. "Mason" },
         },
 	},
 	{
