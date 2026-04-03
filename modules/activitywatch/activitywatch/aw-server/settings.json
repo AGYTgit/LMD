@@ -7,14 +7,14 @@
     "theme": "dark",
     "newReleaseCheckData": {
         "isEnabled": true,
-        "nextCheckTime": "2026-03-23T11:46:08.816Z",
+        "nextCheckTime": "2026-04-01T17:22:03.960Z",
         "howOftenToCheck": 86400,
         "timesChecked": 0
     },
     "userSatisfactionPollData": {
-        "isEnabled": true,
-        "nextPollTime": "2026-03-28T11:26:40.665Z",
-        "timesPollIsShown": 0
+        "isEnabled": false,
+        "nextPollTime": "2026-04-07T17:22:03.563Z",
+        "timesPollIsShown": 1
     },
     "classes": [
         {
