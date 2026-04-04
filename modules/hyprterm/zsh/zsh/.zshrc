@@ -6,7 +6,7 @@ alias bc="bluetoothctl"
 
 # alias ff="fastfetch"
 alias ff='clear -x && fastfetch'
-alias l="ls -la --color -h --group-directories-first"
+alias l="exa -la --git --group-directories-first"
 alias q="cd .."
 alias t="tree -aCI .git --dirsfirst"
 alias tt="t -L 2"
