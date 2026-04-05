@@ -4,7 +4,7 @@ blur = true
 
 [[keyboard.bindings]]
 key = "Space"
-mods = "Control"
+mods = "Control|Shift"
 action = "ToggleViMode"
 
 [[keyboard.bindings]]
