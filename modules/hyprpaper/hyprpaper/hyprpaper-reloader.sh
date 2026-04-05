@@ -1,6 +1,6 @@
-#!/bin/zsh
+#!/bin/bash
 
-source "$HOME/.zshrc"
+source "$HOME/.config/fish/config.fish"
 
 CONFIG_DIR="$DOTFILES/modules/hyprpaper/hyprpaper"
 

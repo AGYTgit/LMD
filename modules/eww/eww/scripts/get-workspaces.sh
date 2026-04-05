@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 monitor=$1
 dynamicVisibility=$2
