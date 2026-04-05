@@ -3,9 +3,14 @@ opacity = 0.85
 blur = true
 
 [[keyboard.bindings]]
-key = "Backspace"
+key = "Space"
 mods = "Control"
-action = "None"
+action = "ToggleViMode"
+
+[[keyboard.bindings]]
+mode = "Vi"
+key = "Escape"
+action = "ToggleViMode"
 
 [font]
 size = 12.0
