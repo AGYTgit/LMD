@@ -1,3 +1,5 @@
+set -g fish_greeting ""
+
 source "$HOME/.dotfiles/LMD/variables/path.env"
 
 alias bc="bluetoothctl"
