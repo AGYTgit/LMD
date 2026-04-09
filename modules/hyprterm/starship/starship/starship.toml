@@ -2,199 +2,88 @@ add_newline = false
 format = '$all'
 palette = 'catppuccin_mocha'
 
+[character]
+success_symbol = "[](mauve)"
+error_symbol = "[](red)"
 
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
+style = "blue"
 
 [bun]
 format = '\[[$symbol($version)]($style)\]'
+style = "red"
 
 [c]
 format = '\[[$symbol($version(-$name))]($style)\]'
+style = "blue"
 
 [cmake]
 format = '\[[$symbol($version)]($style)\]'
+style = "blue"
 
 [cmd_duration]
 format = '\[[$duration]($style)\]'
-
-[cobol]
-format = '\[[$symbol($version)]($style)\]'
+style = "peach"
 
 [conda]
 format = '\[[$symbol$environment]($style)\]'
+style = "green"
 
-[crystal]
-format = '\[[$symbol($version)]($style)\]'
-
-[daml]
-format = '\[[$symbol($version)]($style)\]'
-
-[dart]
-format = '\[[$symbol($version)]($style)\]'
-
-[deno]
-format = '\[[$symbol($version)]($style)\]'
+[directory]
+style = "blue"
+truncation_length = 1
+fish_style_pwd_dir_length = 1
 
 [docker_context]
 format = '\[[$symbol$context]($style)\]'
-
-[dotnet]
-format = '\[[$symbol($version)(🎯 $tfm)]($style)\]'
-
-[elixir]
-format = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
-
-[elm]
-format = '\[[$symbol($version)]($style)\]'
-
-[erlang]
-format = '\[[$symbol($version)]($style)\]'
-
-[fennel]
-format = '\[[$symbol($version)]($style)\]'
-
-[fossil_branch]
-format = '\[[$symbol$branch]($style)\]'
-
-[gcloud]
-format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
+style = "blue"
 
 [git_branch]
 format = '\[[$symbol$branch]($style)\]'
+style = "mauve"
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style))'
+format = '(\[[$all_status$ahead_behind]($style)\])'
+style = "maroon"
 
 [golang]
 format = '\[[$symbol($version)]($style)\]'
-
-[gradle]
-format = '\[[$symbol($version)]($style)\]'
-
-[guix_shell]
-format = '\[[$symbol]($style)\]'
-
-[haskell]
-format = '\[[$symbol($version)]($style)\]'
-
-[haxe]
-format = '\[[$symbol($version)]($style)\]'
-
-[helm]
-format = '\[[$symbol($version)]($style)\]'
-
-[hg_branch]
-format = '\[[$symbol$branch]($style)\]'
-
-[java]
-format = '\[[$symbol($version)]($style)\]'
-
-[julia]
-format = '\[[$symbol($version)]($style)\]'
-
-[kotlin]
-format = '\[[$symbol($version)]($style)\]'
-
-[kubernetes]
-format = '\[[$symbol$context( \($namespace\))]($style)\]'
+style = "sky"
 
 [lua]
 format = '\[[$symbol($version)]($style)\]'
-
-[memory_usage]
-format = '\[$symbol[$ram( | $swap)]($style)\]'
-
-[meson]
-format = '\[[$symbol$project]($style)\]'
-
-[nim]
-format = '\[[$symbol($version)]($style)\]'
-
-[nix_shell]
-format = '\[[$symbol$state( \($name\))]($style)\]'
+style = "blue"
 
 [nodejs]
 format = '\[[$symbol($version)]($style)\]'
-
-[ocaml]
-format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
-
-[opa]
-format = '\[[$symbol($version)]($style)\]'
-
-[openstack]
-format = '\[[$symbol$cloud(\($project\))]($style)\]'
+style = "green"
 
 [os]
 format = '\[[$symbol]($style)\]'
+style = "blue"
 
 [package]
 format = '\[[$symbol$version]($style)\]'
-
-[perl]
-format = '\[[$symbol($version)]($style)\]'
-
-[php]
-format = '\[[$symbol($version)]($style)\]'
-
-[pijul_channel]
-format = '\[[$symbol$channel]($style)\]'
-
-[pulumi]
-format = '\[[$symbol$stack]($style)\]'
-
-[purescript]
-format = '\[[$symbol($version)]($style)\]'
+style = "peach"
 
 [python]
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
-
-[raku]
-format = '\[[$symbol($version-$vm_version)]($style)\]'
-
-[red]
-format = '\[[$symbol($version)]($style)\]'
-
-[ruby]
-format = '\[[$symbol($version)]($style)\]'
+style = "white"
 
 [rust]
 format = '\[[$symbol($version)]($style)\]'
+style = "red"
 
-[scala]
+[java]
 format = '\[[$symbol($version)]($style)\]'
-
-[spack]
-format = '\[[$symbol$environment]($style)\]'
-
-[sudo]
-format = '\[[as $symbol]($style)\]'
-
-[swift]
-format = '\[[$symbol($version)]($style)\]'
-
-[terraform]
-format = '\[[$symbol$workspace]($style)\]'
+style = "red"
 
 [time]
 format = '\[[$time]($style)\]'
+style = "peach"
 
-[username]
-format = '\[[$user]($style)\]'
-
-[vagrant]
-format = '\[[$symbol($version)]($style)\]'
-
-[vlang]
-format = '\[[$symbol($version)]($style)\]'
-
-[zig]
-format = '\[[$symbol($version)]($style)\]'
-
-[solidity]
-format = '\[[$symbol($version)]($style)\]'
-
+# --- Color Palette ---
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
