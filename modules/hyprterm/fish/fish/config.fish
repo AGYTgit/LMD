@@ -4,7 +4,7 @@ source "$HOME/.dotfiles/LMD/variables/path.env"
 
 alias bc="bluetoothctl"
 alias ff='clear -x && fastfetch'
-alias l="exa -la --git --group-directories-first"
+alias l="exa -laa --git --group-directories-first"
 alias q="cd .."
 alias t="tree -aCI .git --dirsfirst"
 alias tt="t -L 2"
