@@ -1,0 +1,18 @@
+[[search_dirs]]
+path = "/home/agyt/projects"
+depth = 5
+
+[[search_dirs]]
+path = "/home/agyt/.dotfiles"
+depth = 1
+
+[[search_dirs]]
+path = "/home/agyt/uniza"
+depth = 5
+
+[[search_dirs]]
+path = "/home/agyt/notes"
+depth = 1
+
+[picker_colors]
+prompt_color = "#cba6f7"
