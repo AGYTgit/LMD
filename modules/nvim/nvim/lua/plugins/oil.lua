@@ -11,7 +11,6 @@ return {
 			},
 			keymaps = {
 				["q"] = "actions.close",
-				["<esc>"] = "actions.close",
 			},
 			float = {
 				padding = 2,

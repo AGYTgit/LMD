@@ -11,13 +11,19 @@ return {
 
 		local harpoon_extensions = require("harpoon.extensions")
 		harpoon:extend(harpoon_extensions.builtins.highlight_current_file())
+
+		harpoon:extend({
+			UI_CREATE = function(cx)
+				vim.keymap.set("n", "<esc>", function() end, { buffer = cx.bufnr, noremap = true })
+			end,
+		})
 	end,
 
 	keys = {
 		{ "<leader>th", function() require("telescope").extensions.harpoon.marks({ prompt_title = "Harpoon" }) end, mode = "n", desc = modName .. "[Telescope] Harpoon marks" },
-        { "<leader>hh", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end, mode = "n", desc = modName .. "Harpoon menu" },
+		{ "<leader>hh", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end, mode = "n", desc = modName .. "Harpoon menu" },
 		{ "<leader>ha", function() require("harpoon"):list():add() end, mode = "n", desc = modName .. "Add buffer" },
-        { "<leader>hd", function() require("harpoon"):list():remove() end, mode = "n", desc = modName .. "Remove from harpoon" },
+		{ "<leader>hd", function() require("harpoon"):list():remove() end, mode = "n", desc = modName .. "Remove from harpoon" },
 		{ "<C-h>", function() require("harpoon"):list():select(1) end, mode = "n", desc = modName .. "Open buffer 1" },
 		{ "<C-t>", function() require("harpoon"):list():select(2) end, mode = "n", desc = modName .. "Open buffer 2" },
 		{ "<C-n>", function() require("harpoon"):list():select(3) end, mode = "n", desc = modName .. "Open buffer 3" },
