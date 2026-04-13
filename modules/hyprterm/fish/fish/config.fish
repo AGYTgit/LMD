@@ -10,6 +10,7 @@ alias l="exa -laa --git --group-directories-first"
 alias q="cd .."
 alias t="tree -aCI .git --dirsfirst"
 alias tt="t -L 2"
+alias tmss="tms switch"
 
 function ban
     man $argv | bat -l man
