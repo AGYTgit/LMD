@@ -20,3 +20,9 @@ TagLib: Could not open file /home/agyt/music/Drum Go Dum.mp3
 TagLib: Could not open file /home/agyt/music/Fearless.mp3
 TagLib: Could not open file /home/agyt/music/Frenchcore Bubblegum bitch.mp3
 TagLib: Could not open file /home/agyt/music/Good 4 u.mp3
+TagLib: MPEG::Header::parse() -- data is too short for an MPEG frame header.
+TagLib: MPEG::Properties::read() -- Could not find an MPEG frame in the stream.
+TagLib: MPEG::Header::parse() -- data is too short for an MPEG frame header.
+TagLib: MPEG::Properties::read() -- Could not find an MPEG frame in the stream.
+TagLib: MPEG::Properties::read() -- Could not find an MPEG frame in the stream.
+TagLib: MPEG::Properties::read() -- Could not find an MPEG frame in the stream.
