@@ -7,6 +7,7 @@ set -Ux LIBVIRT_DEFAULT_URI qemu:///system
 COMPLETE=fish tms | source
 
 alias cp="cp -i"
+alias mv="mv -i"
 alias bc="bluetoothctl"
 alias ff='clear -x && fastfetch'
 alias l="exa -laa --git --group-directories-first"
