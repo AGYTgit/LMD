@@ -2,8 +2,11 @@ set -g fish_greeting ""
 
 source "$HOME/.dotfiles/LMD/variables/path.env"
 
+set -Ux LIBVIRT_DEFAULT_URI qemu:///system
+
 COMPLETE=fish tms | source
 
+alias cp="cp -i"
 alias bc="bluetoothctl"
 alias ff='clear -x && fastfetch'
 alias l="exa -laa --git --group-directories-first"
