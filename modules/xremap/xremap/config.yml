@@ -1,7 +1,0 @@
-modmap:
-  - name: capslock-to-escape
-    remap:
-      CapsLock: Esc
-  - name: escape-to-mute-key
-    remap:
-      Esc: F13

@@ -10,15 +10,15 @@ xkb_symbols "basic" {
     key.type[Group1] = "FOUR_LEVEL";
 
     // Better Escape
-    // key <CAPS>  {[  Escape  ],  actions[Group1] = [  NoAction()  ]};
-    // key <ESC>   {[  F13  ]};
+    key <CAPS>  {[  Escape  ],  actions[Group1] = [  NoAction()  ]};
+    key <ESC>   {[  F13  ]};
 
     // RAlt as lv3_shift
     key <RALT> {[  ISO_Level3_Shift,  ISO_Level3_Shift,  ISO_Level3_Shift,  ISO_Level3_Shift  ]};
     modifier_map Mod5 {  <RALT>  };
 
     // Make backspace work for all layers
-    key <BKSP> {[  backspace,  backspace,  backspace,  backspace  ]};
+    key <BKSP> {[  BackSpace,  BackSpace,  BackSpace,  BackSpace  ]};
 
     // Number Row
     key <TLDE>  {[  noSymbol,  noSymbol,  noSymbol,  noSymbol  ]};
