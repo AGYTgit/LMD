@@ -1,17 +1,17 @@
 [[search_dirs]]
-path = "/home/agyt/projects"
+path = "$HOME/projects"
 depth = 5
 
 [[search_dirs]]
-path = "/home/agyt/.dotfiles"
+path = "$HOME/.dotfiles"
 depth = 1
 
 [[search_dirs]]
-path = "/home/agyt/uniza"
+path = "$HOME/uniza"
 depth = 5
 
 [[search_dirs]]
-path = "/home/agyt/notes"
+path = "$HOME/notes"
 depth = 1
 
 [picker_colors]
