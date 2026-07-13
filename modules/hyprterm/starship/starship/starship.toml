@@ -1,114 +1,178 @@
-add_newline = false
-format = '$all'
 palette = 'catppuccin_mocha'
+add_newline = false
+
+format = """
+$username\
+[](bg:#DA627D fg:#9A348E)\
+$directory\
+[](fg:#DA627D bg:#FCA17D)\
+$git_branch\
+$git_status\
+[](fg:#FCA17D bg:#86BBD8)\
+$rust\
+$lua\
+$c\
+$java\
+$maven\
+[](fg:#86BBD8 bg:#33658A)\
+[ ](fg:#33658A)
+$character
+"""
 
 [character]
-success_symbol = "[](mauve)"
-error_symbol = "[](red)"
+success_symbol = "[](#cba6f7)"
+error_symbol = "[](#f38ba8)"
 
-[aws]
-format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
-style = "blue"
-
-[bun]
-format = '\[[$symbol($version)]($style)\]'
-style = "red"
-
-[c]
-format = '\[[$symbol($version(-$name))]($style)\]'
-style = "blue"
-
-[cmake]
-format = '\[[$symbol($version)]($style)\]'
-style = "blue"
-
-[cmd_duration]
-format = '\[[$duration]($style)\]'
-style = "peach"
-
-[conda]
-format = '\[[$symbol$environment]($style)\]'
-style = "green"
+[username]
+show_always = true
+style_user = "bg:#9A348E"
+style_root = "bg:#9A348E"
+format = "[ $user ]($style)"
 
 [directory]
-style = "blue"
+style = "bg:#DA627D"
+format = "[ $path ]($style)"
 truncation_length = 1
 fish_style_pwd_dir_length = 1
 
-[docker_context]
-format = '\[[$symbol$context]($style)\]'
-style = "blue"
-
 [git_branch]
-format = '\[[$symbol$branch]($style)\]'
-style = "mauve"
+symbol = ""
+style = "bg:#FCA17D"
+format = "[ $symbol $branch ]($style)"
 
 [git_status]
-format = '(\[[$all_status$ahead_behind]($style)\])'
-style = "maroon"
-
-[golang]
-format = '\[[$symbol($version)]($style)\]'
-style = "sky"
-
-[lua]
-format = '\[[$symbol($version)]($style)\]'
-style = "blue"
-
-[nodejs]
-format = '\[[$symbol($version)]($style)\]'
-style = "green"
-
-[os]
-format = '\[[$symbol]($style)\]'
-style = "blue"
-
-[package]
-format = '\[[$symbol$version]($style)\]'
-style = "peach"
-
-[python]
-format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
-style = "white"
+style = "bg:#FCA17D"
+format = "[$all_status$ahead_behind ]($style)"
 
 [rust]
-format = '\[[$symbol($version)]($style)\]'
-style = "red"
+symbol = ""
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[lua]
+symbol = "󰢱"
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[c]
+symbol = " "
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[cpp]
+symbol = " "
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = "[ $symbol $context ]($style)"
+
+[elixir]
+symbol = " "
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[elm]
+symbol = " "
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = " "
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[gradle]
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[haskell]
+symbol = " "
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
 
 [java]
-format = '\[[$symbol($version)]($style)\]'
-style = "red"
+symbol = " "
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[julia]
+symbol = " "
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[maven]
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[nodejs]
+symbol = ""
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[bun]
+symbol = ""
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[nim]
+symbol = "󰆥 "
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
+
+[scala]
+symbol = " "
+style = "bg:#86BBD8"
+format = "[ $symbol ($version) ]($style)"
 
 [time]
-format = '\[[$time]($style)\]'
-style = "peach"
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#33658A"
+format = "[ ♥ $time ]($style)"
+
+
+# # Here is how you can shorten some long paths by text replacement
+# # similar to mapped_locations in Oh My Posh:
+# [directory.substitutions]
+# "Documents" = "󰈙 "
+# "Downloads" = " "
+# "Music" = " "
+# "Pictures" = " "
+# # Keep in mind that the order matters. For example:
+# # "Important Documents" = " 󰈙 "
+# # will not be replaced, because "Documents" was already substituted before.
+# # So either put "Important Documents" before "Documents" or use the substituted version:
+# # "Important 󰈙 " = " 󰈙 "
 
 # --- Color Palette ---
 
 [palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
+rosewater   = "#f5e0dc"
+flamingo    = "#f2cdcd"
+pink        = "#f5c2e7"
+mauve       = "#cba6f7"
+red         = "#f38ba8"
+maroon      = "#eba0ac"
+peach       = "#fab387"
+yellow      = "#f9e2af"
+green       = "#a6e3a1"
+teal        = "#94e2d5"
+sky         = "#89dceb"
+sapphire    = "#74c7ec"
+blue        = "#89b4fa"
+lavender    = "#b4befe"
+text        = "#cdd6f4"
+subtext1    = "#bac2de"
+subtext0    = "#a6adc8"
+overlay2    = "#9399b2"
+overlay1    = "#7f849c"
+overlay0    = "#6c7086"
+surface2    = "#585b70"
+surface1    = "#45475a"
+surface0    = "#313244"
+base        = "#1e1e2e"
+mantle      = "#181825"
+crust       = "#11111b"
