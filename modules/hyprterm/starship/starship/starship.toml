@@ -21,8 +21,8 @@ $character
 """
 
 [character]
-success_symbol = "[](#cba6f7)"
-error_symbol = "[](#f38ba8)"
+success_symbol = "[](bg4)"
+error_symbol = "[](bg4)"
 
 [username]
 show_always = true
