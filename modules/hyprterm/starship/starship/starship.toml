@@ -15,6 +15,7 @@ $c\
 $java\
 $maven\
 [](fg:bg4 bg:bg5)\
+$cmd_duration\
 [ ](fg:bg5)
 $character
 """
@@ -126,6 +127,11 @@ format = "[ $symbol ($version) ]($style)"
 symbol = " "
 style = "fg:fg4 bg:bg4"
 format = "[ $symbol ($version) ]($style)"
+
+[cmd_duration]
+min_time = 1000  # Only show if the command took 2 seconds or longer (in milliseconds)
+style = "fg:fg5 bg:bg5"
+format = "[ 󱎫 $duration ]($style)"
 
 [palettes.mine]
 bg1 = "#0671b7"
