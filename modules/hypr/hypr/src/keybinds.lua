@@ -105,20 +105,34 @@ hl.bind(mainMod .. " + SHIFT + 1", hl.dsp.window.move({ workspace = "10" }))
 
 -- Special Workspaces
 hl.bind("ALT + Y", function()
-	if hl.dsp.exec_cmd("pgrep -x ncmpcpp") == "" then
-        hl.dispatch(hl.dsp.workspace.toggle_special("ncmpcpp"))
-        hl.dispatch(hl.dsp.exec_cmd("alacritty -e ncmpcpp"))
-        return
-    end
+	local handle = io.popen("pgrep -x ncmpcpp")
+	if handle == nil then
+		return
+	end
+	local result = handle:read("*a")
+	handle:close()
 
-    hl.dispatch(hl.dsp.workspace.toggle_special("ncmpcpp"))
+	if result == "" then
+		hl.dispatch(hl.dsp.workspace.toggle_special("ncmpcpp"))
+		hl.dispatch(hl.dsp.exec_cmd("alacritty -e ncmpcpp"))
+		return
+	end
+
+	hl.dispatch(hl.dsp.workspace.toggle_special("ncmpcpp"))
 end)
 
 hl.bind("ALT + P", function()
-	if hl.dsp.exec_cmd("pgrep -x qalculate-gtk") == "" then
-        hl.dispatch(hl.dsp.exec_cmd("qalculate-gtk"))
-        return
-    end
+	local handle = io.popen("pgrep -x qalculate-gtk")
+	if handle == nil then
+		return
+	end
+	local result = handle:read("*a")
+	handle:close()
 
-    hl.dispatch(hl.dsp.workspace.toggle_special("qalculate-gtk"))
+	if result == "" then
+		hl.dispatch(hl.dsp.exec_cmd("qalculate-gtk"))
+		return
+	end
+
+	hl.dispatch(hl.dsp.workspace.toggle_special("qalculate-gtk"))
 end)
