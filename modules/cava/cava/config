@@ -1,0 +1,28 @@
+[general]
+live-config = 1
+
+framerate = 240
+
+bars = 0
+bar_width = 2
+bar_spacing = 1
+
+[input]
+method = pipewire
+source = auto
+
+[output]
+# Method to render bars. Options: ncurses, noncurses, raw, sdl
+method = noncurses
+
+[color]
+# You can set single colors or a gradient
+gradient = 1
+gradient_count = 3
+gradient_color_1 = '#89b4fa'
+gradient_color_2 = '#cba6f7'
+gradient_color_3 = '#f38ba8'
+
+[smoothing]
+monstercat = 0
+noise_reduction = 50
