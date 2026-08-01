@@ -6,11 +6,11 @@ hl.window_rule({
     suppress_event = "maximize",
 })
 
--- hl.window_rule({
---     name = "qalculate-gtk-workspace-rule",
---     match = {
---         class = "qalculate-gtk",
---     },
---     workspace = "special:qalculate-gtk",
---     float = true,
--- })
+hl.window_rule({
+    name = "qalculate-gtk-workspace-rule",
+    match = {
+        class = "qalculate-gtk",
+    },
+    workspace = "special:qalculate-gtk",
+    float = true,
+})

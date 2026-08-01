@@ -6,11 +6,11 @@
 --        |___/|_|                             
 
 require("src.monitors")
-require("src.auto-launch")
+require("src.exec")
 require("src.look-and-feel")
 require("src.input")
-require("src.keybinds")
+require("src.keybinds.init")
 require("src.window-rules")
 require("src.layer-rules")
 require("src.workspace-rules")
-require("src.environmental-variables")
+require("src.env")
