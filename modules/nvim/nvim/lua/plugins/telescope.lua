@@ -142,12 +142,14 @@ return {
 		vim.api.nvim_set_hl(0, "TelescopeResultsFile", { fg = colors.fg })
 	end,
 
-	keys = {
-		{ "<leader>tt", "<cmd>Telescope find_files<CR>", mode = "n", desc = modName .. "Find files" },
-		-- { "<leader>tg", "<cmd>Telescope live_grep<CR>", mode = "n", desc = modName .. "Live grep" },
-		{ "<leader>tn", "<cmd>TodoTelescope<cr>", mode = "n", desc = modName .. "Find todo" },
-		{ "<leader>?", "<cmd>Telescope keymaps<CR>", mode = "n", desc = modName .. "Show keymaps" },
-		{ "<leader>tg", function() dir_grep({ additional_args = { "--no-ignore", "--hidden" } }) end, mode = "n", desc = modName .. "Grep in directory" },
-		{ "<leader>tG", function() dir_grep({ additional_args = { "--no-ignore", "--hidden", "--files-without-match" }, prompt_title = "IGrep" }) end, mode = "n", desc = modName .. "Grep missing in directory" },
-	},
+keys = {
+        { "<leader>tt", "<cmd>Telescope find_files<CR>", mode = "n", desc = modName .. "Find files" },
+        -- { "<leader>tg", "<cmd>Telescope live_grep<CR>", mode = "n", desc = modName .. "Live grep" },
+        { "<leader>tn", "<cmd>TodoTelescope<cr>", mode = "n", desc = modName .. "Find todo" },
+        { "<leader>?", "<cmd>Telescope keymaps<CR>", mode = "n", desc = modName .. "Show keymaps" },
+        { "<leader>tg", function() dir_grep({ additional_args = { "--no-ignore", "--hidden" } }) end, mode = "n", desc = modName .. "Grep in directory" },
+        { "<leader>tG", function() dir_grep({ additional_args = { "--no-ignore", "--hidden", "--files-without-match" }, prompt_title = "IGrep" }) end, mode = "n", desc = modName .. "Grep missing in directory" },
+        { "<leader>tr", "<cmd>Telescope lsp_references<CR>", mode = "n", desc = modName .. "LSP References" },
+        { "<leader>tR", "<cmd>Telescope grep_string<CR>", mode = "n", desc = modName .. "Grep string under cursor" },
+    },
 }
