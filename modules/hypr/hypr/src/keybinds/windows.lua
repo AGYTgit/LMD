@@ -28,4 +28,4 @@ hl.bind("ALT + CONTROL + L", hl.dsp.window.resize({ x = 64, y = 0, relative = tr
 
 -- orientation
 -- hl.bind("ALT + S", hl.dsp.layout("togglesplit")) -- dwindle
-hl.bind("ALT + S", hl.dsp.layout("orientationcycle center left")) -- master
+-- hl.bind("ALT + S", hl.dsp.layout("orientationcycle center left")) -- master
