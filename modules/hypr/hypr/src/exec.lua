@@ -1,5 +1,5 @@
 hl.on("hyprland.start", function ()
-    hl.exec_cmd("hyprctl dispatch workspace 5")
+    hl.exec_cmd("hyprctl dispatch hl.dsp.focus({ workspace = 5 })")
     hl.exec_cmd("$HOME/.dotfiles/LMD/modules/hyprpaper/hyprpaper/hyprpaper-reloader.sh")
     -- hl.exec_cmd("quickshell -c $HOME/.dotfiles/LMD/modules/qs/hyprbar")
     hl.exec_cmd("eww open hyprbar")
