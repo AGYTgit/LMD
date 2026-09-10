@@ -1,8 +1,9 @@
 local vars = require("src.vars")
 
 -- terminal/app launcher
-hl.bind("ALT + SEMICOLON", hl.dsp.exec_cmd(vars.terminal))
 hl.bind("ALT + BACKSPACE", hl.dsp.exec_cmd(vars.terminal))
+hl.bind("ALT + SEMICOLON", hl.dsp.exec_cmd(vars.terminal))
+hl.bind("ALT + SPACE", hl.dsp.exec_cmd(vars.menu))
 hl.bind("ALT + I", hl.dsp.exec_cmd(vars.menu))
 
 -- fun
