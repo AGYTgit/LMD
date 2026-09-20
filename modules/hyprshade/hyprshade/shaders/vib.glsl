@@ -1,9 +1,12 @@
+#version 300 es
 precision mediump float;
-varying vec2 v_texcoord;
+
+in vec2 v_texcoord;
+out vec4 fragColor;
+
 uniform sampler2D tex;
 
 const vec3 LUMA_COEFF = vec3(0.4, 0.4, 0.4);
-
 const float SATTURATION_MULTIPLIER = 1.0;
 
 const vec3 VIB_RGB_BALANCE = vec3(1.0, 1.0, 1.0);
@@ -12,22 +15,19 @@ const vec3 VIB_COEFF = VIB_RGB_BALANCE * VIB_STRENGTH * -1.0;
 const float BRIGHTNESS = 0.8;
 
 void main() {
-    vec4 pixRGBA = texture2D(tex, v_texcoord);
-    vec3 color = vec3(pixRGBA[0], pixRGBA[1], pixRGBA[2]);
+    vec4 pixRGBA = texture(tex, v_texcoord);
+    vec3 color = pixRGBA.rgb;
 
     float luma = dot(LUMA_COEFF, color);
 
-    float colorMax = max(color[0], max(color[1], color[2]));
-    float colorMin = min(color[0], min(color[1], color[2]));
+    float colorMax = max(color.r, max(color.g, color.b));
+    float colorMin = min(color.r, min(color.g, color.b));
 
     float satturation = (colorMax - colorMin) * SATTURATION_MULTIPLIER;
 
     vec3 adjustmentFact = (sign(VIB_COEFF) * satturation - 1.0) * VIB_COEFF + 1.0;
 
-    pixRGBA[0] = mix(luma, color[0], adjustmentFact[0]) * BRIGHTNESS;
-    pixRGBA[1] = mix(luma, color[1], adjustmentFact[1]) * BRIGHTNESS;
-    pixRGBA[2] = mix(luma, color[2], adjustmentFact[2]) * BRIGHTNESS;
+    pixRGBA.rgb = mix(vec3(luma), color, adjustmentFact) * BRIGHTNESS;
 
-    gl_FragColor = pixRGBA;
+    fragColor = pixRGBA;
 }
-
