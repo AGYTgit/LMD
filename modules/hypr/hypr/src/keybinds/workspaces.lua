@@ -1,0 +1,23 @@
+-- focus
+hl.bind("ALT + 5", hl.dsp.focus({ workspace = "1" }))
+hl.bind("ALT + 4", hl.dsp.focus({ workspace = "2" }))
+hl.bind("ALT + 3", hl.dsp.focus({ workspace = "3" }))
+hl.bind("ALT + 2", hl.dsp.focus({ workspace = "4" }))
+hl.bind("ALT + 1", hl.dsp.focus({ workspace = "5" }))
+hl.bind("SUPER + 5", hl.dsp.focus({ workspace = "6" }))
+hl.bind("SUPER + 4", hl.dsp.focus({ workspace = "7" }))
+hl.bind("SUPER + 3", hl.dsp.focus({ workspace = "8" }))
+hl.bind("SUPER + 2", hl.dsp.focus({ workspace = "9" }))
+hl.bind("SUPER + 1", hl.dsp.focus({ workspace = "10" }))
+
+-- move
+hl.bind("ALT + CONTROL + 5", hl.dsp.window.move({ workspace = "1" }))
+hl.bind("ALT + CONTROL + 4", hl.dsp.window.move({ workspace = "2" }))
+hl.bind("ALT + CONTROL + 3", hl.dsp.window.move({ workspace = "3" }))
+hl.bind("ALT + CONTROL + 2", hl.dsp.window.move({ workspace = "4" }))
+hl.bind("ALT + CONTROL + 1", hl.dsp.window.move({ workspace = "5" }))
+hl.bind("SUPER + CONTROL + 5", hl.dsp.window.move({ workspace = "6" }))
+hl.bind("SUPER + CONTROL + 4", hl.dsp.window.move({ workspace = "7" }))
+hl.bind("SUPER + CONTROL + 3", hl.dsp.window.move({ workspace = "8" }))
+hl.bind("SUPER + CONTROL + 2", hl.dsp.window.move({ workspace = "9" }))
+hl.bind("SUPER + CONTROL + 1", hl.dsp.window.move({ workspace = "10" }))

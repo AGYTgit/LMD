@@ -1,17 +1,18 @@
 #version 300 es
+precision mediump float;
 
-precision highp float;
 in vec2 v_texcoord;
-uniform sampler2D tex;
 out vec4 fragColor;
 
-const vec3 LUMA_COEFF = vec3(0.4, 0.4, 0.4);
+uniform sampler2D tex;
 
+const vec3 LUMA_COEFF = vec3(0.4, 0.4, 0.4);
 const float SATTURATION_MULTIPLIER = 1.0;
 
 const vec3 VIB_RGB_BALANCE = vec3(1.0, 1.0, 1.0);
 const float VIB_STRENGTH = 0.45;
 const vec3 VIB_COEFF = VIB_RGB_BALANCE * VIB_STRENGTH * -1.0;
+const float BRIGHTNESS = 0.8;
 
 void main() {
     vec4 pixRGBA = texture(tex, v_texcoord);
@@ -26,9 +27,7 @@ void main() {
 
     vec3 adjustmentFact = (sign(VIB_COEFF) * satturation - 1.0) * VIB_COEFF + 1.0;
 
-    color.r = mix(luma, color.r, adjustmentFact.r);
-    color.g = mix(luma, color.g, adjustmentFact.g);
-    color.b = mix(luma, color.b, adjustmentFact.b);
+    pixRGBA.rgb = mix(vec3(luma), color, adjustmentFact) * BRIGHTNESS;
 
-    fragColor = vec4(color, pixRGBA.a);
+    fragColor = pixRGBA;
 }
