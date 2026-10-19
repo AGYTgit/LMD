@@ -26,3 +26,5 @@ TagLib: MPEG::Header::parse() -- data is too short for an MPEG frame header.
 TagLib: MPEG::Properties::read() -- Could not find an MPEG frame in the stream.
 TagLib: MPEG::Properties::read() -- Could not find an MPEG frame in the stream.
 TagLib: MPEG::Properties::read() -- Could not find an MPEG frame in the stream.
+writeCommonTags: couldn't write 'track' tag to 'Nightcore Hands Up!.m4a' as it's not a positive integer
+writeCommonTags: couldn't write 'track' tag to 'Nightcore Hands Up!.m4a' as it's not a positive integer
