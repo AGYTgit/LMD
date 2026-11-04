@@ -18,8 +18,8 @@ hl.bind("ALT + SHIFT + A", hl.dsp.exec_cmd("hyprctl switchxkblayout current next
 hl.bind("SUPER + M", hl.dsp.exit())
 
 -- Hyprshot & Hyprpicker
-hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("hyprshade off; hyprshot -m region --clipboard-only; hyprctl reload"))
-hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("hyprshade off;  hyprpicker -af hex; hyprctl reload"))
+hl.bind("ALT + K", hl.dsp.exec_cmd("hyprshade off; hyprshot -m region --clipboard-only; hyprctl reload"))
+hl.bind("ALT + J", hl.dsp.exec_cmd("hyprshade off;  hyprpicker -af hex; hyprctl reload"))
 
 -- clicker
 -- hl.bind("SHIFT + mouse:276", hl.dsp.exec_cmd("/home/emi/.dotfiles/LMD/modules/hypr/hypr/src/keybinds/clicker.sh start"))
