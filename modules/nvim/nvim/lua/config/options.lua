@@ -63,3 +63,11 @@ vim.g.rustfmt_autosave = 0
 
 -- transparency
 -- settings are in tokyonight.lua
+
+-- mosel
+vim.filetype.add({
+  extension = {
+    mos = "mosel",
+  },
+})
+

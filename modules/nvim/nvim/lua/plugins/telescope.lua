@@ -149,5 +149,7 @@ return {
 		{ "<leader>?", "<cmd>Telescope keymaps<CR>", mode = "n", desc = modName .. "Show keymaps" },
 		{ "<leader>tg", function() dir_grep({ additional_args = { "--no-ignore", "--hidden" } }) end, mode = "n", desc = modName .. "Grep in directory" },
 		{ "<leader>tG", function() dir_grep({ additional_args = { "--no-ignore", "--hidden", "--files-without-match" }, prompt_title = "IGrep" }) end, mode = "n", desc = modName .. "Grep missing in directory" },
+        { "<leader>tr", "<cmd>Telescope lsp_references<CR>", mode = "n", desc = modName .. "LSP References" },
+        { "<leader>tR", "<cmd>Telescope grep_string<CR>", mode = "n", desc = modName .. "Grep string under cursor" },
 	},
 }

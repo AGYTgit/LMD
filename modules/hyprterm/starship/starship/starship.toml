@@ -1,114 +1,149 @@
+palette = 'mine'
 add_newline = false
-format = '$all'
-palette = 'catppuccin_mocha'
+
+format = """
+$username\
+[](fg:bg1 bg:bg2)\
+$directory\
+[](fg:bg2 bg:bg3)\
+$git_branch\
+$git_status\
+[](fg:bg3 bg:bg4)\
+$rust\
+$lua\
+$c\
+$java\
+$maven\
+[](fg:bg4 bg:bg5)\
+$cmd_duration\
+[ ](fg:bg5)
+$character
+"""
 
 [character]
-success_symbol = "[](mauve)"
-error_symbol = "[](red)"
+success_symbol = "[](bg4)"
+error_symbol = "[](bg4)"
 
-[aws]
-format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
-style = "blue"
-
-[bun]
-format = '\[[$symbol($version)]($style)\]'
-style = "red"
-
-[c]
-format = '\[[$symbol($version(-$name))]($style)\]'
-style = "blue"
-
-[cmake]
-format = '\[[$symbol($version)]($style)\]'
-style = "blue"
-
-[cmd_duration]
-format = '\[[$duration]($style)\]'
-style = "peach"
-
-[conda]
-format = '\[[$symbol$environment]($style)\]'
-style = "green"
+[username]
+show_always = true
+style_user = "fg:fg1 bg:bg1"
+style_root = "fg:fg1 bg:bg1"
+format = "[ $user ]($style)"
 
 [directory]
-style = "blue"
+style = "fg:fg2 bg:bg2"
+format = "[ $path ]($style)"
 truncation_length = 1
 fish_style_pwd_dir_length = 1
 
-[docker_context]
-format = '\[[$symbol$context]($style)\]'
-style = "blue"
-
 [git_branch]
-format = '\[[$symbol$branch]($style)\]'
-style = "mauve"
+symbol = ""
+style = "fg:fg3 bg:bg3"
+format = "[ $symbol $branch ]($style)"
 
 [git_status]
-format = '(\[[$all_status$ahead_behind]($style)\])'
-style = "maroon"
-
-[golang]
-format = '\[[$symbol($version)]($style)\]'
-style = "sky"
-
-[lua]
-format = '\[[$symbol($version)]($style)\]'
-style = "blue"
-
-[nodejs]
-format = '\[[$symbol($version)]($style)\]'
-style = "green"
-
-[os]
-format = '\[[$symbol]($style)\]'
-style = "blue"
-
-[package]
-format = '\[[$symbol$version]($style)\]'
-style = "peach"
-
-[python]
-format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
-style = "white"
+style = "fg:fg6 bg:bg3"
+format = "[$all_status$ahead_behind ]($style)"
 
 [rust]
-format = '\[[$symbol($version)]($style)\]'
-style = "red"
+symbol = ""
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
+
+[lua]
+symbol = "󰢱"
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
+
+[c]
+symbol = " "
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
+
+[cpp]
+symbol = " "
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
+
+[docker_context]
+symbol = " "
+style = "fg:fg4 bg:#06969A"
+format = "[ $symbol $context ]($style)"
+
+[elixir]
+symbol = " "
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
+
+[elm]
+symbol = " "
+style = "bg:bg4"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = " "
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
+
+[gradle]
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
+
+[haskell]
+symbol = " "
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
 
 [java]
-format = '\[[$symbol($version)]($style)\]'
-style = "red"
+symbol = " "
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
 
-[time]
-format = '\[[$time]($style)\]'
-style = "peach"
+[julia]
+symbol = " "
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
 
-# --- Color Palette ---
+[maven]
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
 
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
+[nodejs]
+symbol = ""
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
+
+[bun]
+symbol = ""
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
+
+[nim]
+symbol = "󰆥 "
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
+
+[scala]
+symbol = " "
+style = "fg:fg4 bg:bg4"
+format = "[ $symbol ($version) ]($style)"
+
+[cmd_duration]
+min_time = 1000  # Only show if the command took 2 seconds or longer (in milliseconds)
+style = "fg:fg5 bg:bg5"
+format = "[ 󱎫 $duration ]($style)"
+
+[palettes.mine]
+bg1 = "#0671b7"
+bg2 = "#67a3d9"
+bg3 = "#8ebdde"
+bg4 = "#f8b7cd"
+bg5 = "#f298b4"
+
+
+fg1 = "#f0f2ff"
+fg2 = "#f0f2ff"
+fg3 = "#f0f2ff"
+fg4 = "#f0f2ff"
+fg5 = "#f0f2ff"
+fg6 = "#f0f2ff"

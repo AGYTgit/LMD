@@ -18,7 +18,7 @@ xkb_symbols "basic" {
     modifier_map Mod5 {  <RALT>  };
 
     // Make backspace work for all layers
-    key <BKSP> {[  backspace,  backspace,  backspace,  backspace  ]};
+    key <BKSP> {[  BackSpace,  BackSpace,  BackSpace,  BackSpace  ]};
 
     // Number Row
     key <TLDE>  {[  noSymbol,  noSymbol,  noSymbol,  noSymbol  ]};

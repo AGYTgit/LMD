@@ -29,6 +29,18 @@ bind ^ clear-screen
 set -gx EDITOR nvim
 set -gx PATH "$HOME/.cargo/bin:$PATH"
 
+
+# FICO Xpress Mosel Environment Variables
+set -gx XPRESSDIR /opt/xpressmp
+set -gx XPRESS /opt/xpressmp/bin
+set -gx MOSEL_RESOURCES /opt/xpressmp/dso
+set -gx CLASSPATH /opt/xpressmp/lib/xprm.jar $CLASSPATH
+
+# Update PATH and LD_LIBRARY_PATH
+fish_add_path /opt/xpressmp/bin
+set -gx LD_LIBRARY_PATH /opt/xpressmp/lib $LD_LIBRARY_PATH
+
+
 # Fish color scheme - default theme (terminal colors)
 set -gx fish_color_normal normal
 set -gx fish_color_autosuggestion brblack

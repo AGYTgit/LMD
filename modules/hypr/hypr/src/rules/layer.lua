@@ -1,7 +1,7 @@
 hl.layer_rule({
     name = "blur",
     match = {
-        namespace = "wofi|gtk-layer-shell",
+        namespace = "wofi|quickshell",
     },
     blur = true,
 })

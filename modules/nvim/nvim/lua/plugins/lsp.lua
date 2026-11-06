@@ -1,19 +1,26 @@
 local modName = "[Lsp] "
 
+-- local dap = require("dap")
+-- dap.adapters.lldb = {
+--     type = 'executable',
+--     command = '/usr/bin/lldb-vscode', -- adjust as needed
+--     name = "lldb"
+-- }
+
 return {
 	{
 		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup({
-                ui = {
-                    border = "rounded",
-                }
-            })
+				ui = {
+					border = "rounded",
+				},
+			})
 		end,
-        keys = {
-            { "<leader>ca", vim.lsp.buf.code_action, mode = "n", desc = modName .. "Code actions" },
-        { "<leader>m", "<cmd>Mason<cr>", mode = "n", desc = modName .. "Mason" },
-        },
+		keys = {
+			{ "<leader>ca", vim.lsp.buf.code_action, mode = "n", desc = modName .. "Code actions" },
+			{ "<leader>m", "<cmd>Mason<cr>", mode = "n", desc = modName .. "Mason" },
+		},
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
@@ -21,6 +28,8 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
+					"cpptools",
+					"codelldb",
 					"rust_analyzer",
 					"clangd",
 					"jdtls",
@@ -34,7 +43,6 @@ return {
 				automatic_installation = true,
 			})
 		end,
-
 	},
 	{
 		"neovim/nvim-lspconfig",
@@ -51,7 +59,15 @@ return {
 				},
 			})
 
-			vim.lsp.config("rust_analyzer", {})
+			im.lsp.config("rust_analyzer", {
+				settings = {
+					["rust-analyzer"] = {
+						check = {
+							command = "clippy",
+						},
+					},
+				},
+			})
 			vim.lsp.config("clangd", {})
 			vim.lsp.config("jdtls", {})
 			vim.lsp.config("bashls", {})
