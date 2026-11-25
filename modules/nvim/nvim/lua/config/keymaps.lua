@@ -18,6 +18,8 @@ map("n", "k", "kzz", { desc = modName .. "Move up" .. param })
 map("n", "<S-g>", "<S-g>zz", { desc = modName .. "Jump to end" .. param })
 map("n", "n", "nzz", { desc = modName .. "Jump to next match" .. param })
 map("n", "<S-n>", "<S-n>zz", { desc = modName .. "Jump to prev match" .. param })
+map("n", "<C-o>", "<C-o>zz", { desc = modName .. "Step back" .. param })
+map("n", "<Tab>", "<Tab>zz", { desc = modName .. "Step forward" .. param })
 
 -- lazy menu
 map({ "n" }, "<leader>l", "<cmd>Lazy<CR>", { desc = modName .. "Lazy menu" })
